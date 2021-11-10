@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/49afa081f5.js" crossorigin="anonymous"></script>
+    <title>Nordstorm</title>
+    <style>
+        #container {
+            height: 500px;
+            width: 500px;
+            margin-left: 30%;
+            margin-top: 200px;
+
+        }
+
+        #container>p {
+            color: #8e8e8e;
+
+        }
+
+        button {
+            width: 80%;
+            height: 35px;
+            font: 25px;
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 75%;
+            padding: 10px;
+
+
+
+        }
+
+        p>span {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <p style="font-size: 40px;">Welcome back!</p>
+        <p>Sign in with the same info at:</p>
+        <h1>NORDSTORM</h1>
+        <h5>Email</h5>
+        <input id="email" type="email" placeholder="" />
+        <h5>Password <i class="fas fa-question-circle"></i></h5>
+        <input id="password" type="password" placeholder="" />
+        <p> <span>Forgot password?</span></p>
+        <p><i class="far fa-square"></i> Keep me signed in. <span>Details</span></p>
+        <button>Sign in</button>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", signIn);
+    var regdUsers = JSON.parse(localStorage.getItem("userData")) || [];
+    function signIn(e) {
+        // e.preventDefault();
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+        var flag = false
+        for (var i = 0; i < regdUsers.length; i++) {
+            if (regdUsers[i].email == email && regdUsers[i].password == pass) {
+                flag = true;
+
+                // console.log("efe");
+                window.location.href = "prod.html";
+
+                break;
+            }
+            //  else if(regdUsers[i].email != email || regdUsers[i].password != pass){
+            //      alert("Wrong Credential")
+            //      break;
+        }
+        if (flag == true) {
+            alert("Sign in Succesfull");
+        } else if (flag == false) {
+            alert("wfwef");
+        }
+
+
+
+    }
+
+</script>

@@ -8,18 +8,16 @@
     <title>Nordstrom Online & In Store: Shoes, Jewelry, Clothing, Makeup, Dresses</title>
     <link rel="icon" href="https://n.nordstrommedia.com/id/c4fb2a09-3657-4161-9b79-6412897d9399.png"
         type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+
 
     <style>
         #firstbar {
             background-color: black;
             text-align: center;
             color: white;
-            line-height: 1.4;
             font-size: 13px;
             font-weight: 400;
             letter-spacing: 0.15px;
-            padding: 10px 25px;
         }
 
         #firstbar a {
@@ -29,7 +27,7 @@
 
         #firstbar p {
             float: left;
-            margin-left: 400px;
+            margin-left: 500px;
         }
 
         #firstbar button {
@@ -39,6 +37,7 @@
             border: none;
             cursor: pointer;
             font-size: 12px;
+            margin-top: 10px;
         }
 
         #firstbar button img {
@@ -46,10 +45,12 @@
             width: 15px;
             border-radius: 50%;
             margin-right: 5px;
+            margin-top: 5px;
         }
 
         #firstbar span {
             vertical-align: top;
+            margin-top: 15px;
         }
 
         .clear {
@@ -62,26 +63,30 @@
 
         }
 
-        #navbar>div {
+        #nav {
             width: 96.5%;
             margin: auto;
         }
 
-        #inside-div>div {
-            float: left;
-            margin-right: 40px;
+        #inside-div {
+            display: flex;
+
         }
 
         #logo {
-            width: 15%;
+            margin-top: 10px;
+            width: 17%;
+            font-size: 13px;
         }
 
-        #navs {
-            width: 60%;
-            margin-top: 7px;
+        #category {
+            width: 65%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
         }
 
-        #navs>button {
+        #category>button {
             display: inline;
             border: none;
             background-color: white;
@@ -89,7 +94,7 @@
             color: #393939;
             font-family: Brandon Text, Arial, sans-serif;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 13px;
             transition-duration: 1s;
         }
 
@@ -99,13 +104,13 @@
 
         #search {
             display: flex;
-            width: 18%;
+            width: 20%;
             margin-right: 0px !important;
             margin-left: 10px;
         }
 
         #search>div {
-            width: 37%;
+
             margin-right: 20px;
         }
 
@@ -153,7 +158,7 @@
             height: 20px;
         }
 
-        #navs>button:nth-last-child(1) {
+        #category>button:nth-last-child(1) {
             margin-left: 17px;
             margin-right: 0px;
         }
@@ -163,20 +168,18 @@
         }
 
         .black-content,
-        .Home-content,
+        .sale-content,
         .Women-content,
         .Men-content,
         .Kids-content,
         .YoungAdult-content,
-        .Kids-content,
         .Activewear-content,
-        .Gifts-content,
+        .Home-content,
         .Beauty-content,
-        .Designer-content,
-        .Brands-content {
+        .Designer-content {
             display: block;
             height: 0px;
-            width: 100%;
+            width: 97%;
             position: absolute;
             overflow: hidden;
             background-color: #ffffff;
@@ -192,7 +195,7 @@
 
         #inputBox {
             display: block;
-            height: 0px;
+            margin-top: 35px;
             position: absolute;
             top: 90px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -200,19 +203,21 @@
             border: none;
             padding: 0px 20px;
             width: 400px;
+            text-align: left;
         }
 
         #signIN {
             display: none;
             position: absolute;
-            top: 90px;
+            top: 100px;
             right: 20px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             border: none;
             z-index: 7;
-            padding: 10px 20px;
+            padding: 10px 10px;
             background-color: white;
             width: 16% !important;
+            margin-top: 20px;
         }
 
         #signIN li {
@@ -225,14 +230,18 @@
             width: 65%;
             background-color: black;
             text-align: center;
-            padding: 10px 30px;
+            padding: 5px 20px;
+            margin-right: 15px;
+            text-align: left;
         }
 
         #signIN li:nth-child(2) {
             width: 65%;
             border: 1px solid black;
             text-align: center;
-            padding: 10px 30px;
+            padding: 5px 20px;
+            margin-right: 15px;
+            text-align: left;
         }
 
         #signIN a {
@@ -244,102 +253,95 @@
             color: white;
         }
 
-
+        .right {
+            float: right;
+        }
 
         .mainh3 {
-            margin-top: 20px;
+            margin-top: 25px;
+            /* margin-left: 60px;
+        } */
         }
 
         .black-content>div,
-        .Home-content>div,
+        .sale-content>div,
         .Women-content>div,
         .Men-content>div,
         .Kids-content>div,
         .YoungAdult-content>div,
-        .Kids-content>div,
         .Activewear-content>div,
-        .Gifts-content>div,
+        .Home-content>div,
         .Beauty-content>div,
-        .Designer-content>div,
-        .Brands-content>div {
+        .Designer-content>div {
             display: flex;
         }
 
         .black-content>div>div,
-        .Home-content>div>div,
+        .sale-content>div>div,
         .Women-content>div>div,
         .Men-content>div>div,
         .Kids-content>div>div,
         .YoungAdult-content>div>div,
-        .Kids-content>div>div,
         .Activewear-content>div>div,
-        .Gifts-content>div>div,
+        .Home-content>div>div,
         .Beauty-content>div>div,
-        .Designer-content>div>div,
-        .Brands-content>div>div {
+        .Designer-content>div>div {
             margin-right: 80px;
         }
 
         .black-content ul,
-        .Home-content ul,
+        .sale-content ul,
         .Women-content ul,
         .Men-content ul,
         .Kids-content ul,
         .YoungAdult-content ul,
-        .Kids-content ul,
         .Activewear-content ul,
-        .Gifts-content ul,
+        .Home-content ul,
         .Beauty-content ul,
-        .Designer-content ul,
-        .Brands-content ul {
+        .Designer-content ul {
             list-style-type: none
         }
 
         .black-content a,
-        .Home-content a,
+        .sale-content a,
         .Women-content a,
         .Men-content a,
         .Kids-content a,
         .YoungAdult-content a,
-        .Kids-content a,
         .Activewear-content a,
-        .Gifts-content a,
+        .Home-content a,
         .Beauty-content a,
-        .Designer-content a,
-        .Brands-content a {
+        .Designer-content a {
             color: #393939;
             font-size: 13px;
             line-height: 1.4;
             text-decoration: none;
         }
 
+
         .black-content li>a,
-        .Home-content li>a,
+        .sale-content li>a,
         .Women-content li>a,
         .Men-content li>a,
         .Kids-content li>a,
         .YoungAdult-content li>a,
-        .Kids-content li>a,
         .Activewear-content li>a,
-        .Gifts-content li>a,
+        .Home-content li>a,
         .Beauty-content li>a,
-        .Designer-content li>a,
-        .Brands-content li>a {
+        .Designer-content li>a {
             font-size: 12px;
         }
 
         .black-content li,
-        .Home-content li,
+        .sale-content li,
         .Women-content li,
         .Men-content li,
         .Kids-content li,
         .YoungAdult-content li,
-        .Kids-content li,
         .Activewear-content li,
-        .Gifts-content li,
+        .Home-content li,
         .Beauty-content li,
-        .Designer-content li,
-        .Brands-content li {
+        .Designer-content li {
             margin-bottom: 10px;
         }
 
@@ -350,7 +352,7 @@
         hr {
             background-color: rgb(223, 213, 213);
             height: 1px;
-            width: 200px;
+            width: 160px;
             margin-bottom: 10px;
             border: none;
         }
@@ -397,12 +399,19 @@
         </div>
         <div class="clear"></div>
     </div>
+
+
+
     <div id="navbar" onmouseenter="removeBar()">
         <div id="inside-div">
+
+
             <div id="logo">
                 <a href="landing_page.html"><img src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"></a>
             </div>
-            <div id="navs">
+
+
+            <div id="category">
                 <button id="red" class="categoryType" onclick="dropDown('Blackfriday')"
                     onmouseover="dropDown('Blackfriday')">Black Friday</button>
                 <button class="categoryType" onclick="dropDown('Holidaygifts')"
@@ -419,13 +428,13 @@
                     onmouseover="dropDown('Beauty')">Beauty</button>
                 <button class="categoryType" onclick="dropDown('Designer')"
                     onmouseover="dropDown('Designer')">Designer</button>
-
             </div>
 
             <div id="search" onmouseleave="removeSignBar()">
                 <div id="one" onmouseenter="searchBar()">
                     <div class="img" onmouseenter="removeSignBar()">
-                        <img src="images/search-icon.jpg"></img>
+                        <img
+                            src="https://t3.ftcdn.net/jpg/03/25/73/68/240_F_325736897_lyouuiCkWI59SZAPGPLZ5OWQjw2Gw4qY.jpg"></img>
                     </div>
                     <input id="inputBox" maxlength="200" placeholder="What can we help you find?" type="search"
                         value="">
@@ -439,6 +448,8 @@
                     <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU"></img>
                 </div>
+
+
                 <div id="signIN" onmouseleave="removeSignBar()">
                     <ul>
                         <li>
@@ -451,25 +462,41 @@
                             <a href=""><span>Your Account</span></a>
                         </li>
                         <li>
+                            <a href=""><span>Purchases</span></a>
+                        </li>
+                        <li>
                             <a href=""><span>Wish List</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Looks</span></a>
+                            <a href=""><span>Nordy Club Rewards</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Stores & Events</span></a>
+                            <a href=""><span>Password & personal Info</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>Shipping Addresses</span></a>
+                        </li>
+                        <li>
+                            <a href=""><span>Payment Methods</span></a>
                         </li>
                     </ul>
                 </div>
+
+
                 <div id="bag">
-                    <a href=""><img class="bag-image" src="images/emptybag-icon.png"></img></a>
+                    <a href=""><img class="bag-image"
+                            src="https://cdn-icons.flaticon.com/png/128/2956/premium/2956820.png?token=exp=1636251485~hmac=e696802e55bf51a3752c46d0b8f77bfb"></img></a>
                 </div>
             </div>
         </div>
+
+
         <div class="clear"></div>
     </div>
+
     <div id="main-content">
-        <div class="black-content">
+
+        <div class="sale-content">
             <div>
                 <div class="firstDiv">
                     <ul>
@@ -647,8 +674,7 @@
                         <div>
                             <a href="">
                                 <div>
-                                    <img
-                                        src="	https://n.nordstrommedia.com/id/f3cd68c6-bb58-48f3-acd2-d12b309d3f24.png">
+                                    <img src="https://n.nordstrommedia.com/id/f3cd68c6-bb58-48f3-acd2-d12b309d3f24.png">
                                 </div>
                             </a>
                         </div>
@@ -662,37 +688,28 @@
         </div>
 
 
-        <div class="Women-content">
+        <div class="sale-content">
             <div>
                 <div class="firstDiv">
                     <ul>
                         <li id="saleIn">
-                            <h3 class="mainh3"><a href="">Sale: Get Inspired</a></h3>
+                            <h3 class="mainh3"><a href="">Holiday Gifts: Get Inspired</a></h3>
                         </li>
                         <hr>
                         <li>
-                            <h3><a href="">Bestsellers</a></h3>
+                            <h3><a href="">Gift Cards</a></h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">New Markdowns</a>
+                                <a href="">Festive Experiences</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Price Matched</a>
+                                <a href="">Services</a>
                             </h3>
                         </li>
-                        <li>
-                            <h3>
-                                <a href="">Men's Designer Sale</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="">Women's Designer Sale</a>
-                            </h3>
-                        </li>
+
                     </ul>
                 </div>
                 <div>
@@ -853,20 +870,289 @@
             </div>
         </div>
 
+
+        <div class="Women-content">
+            <div>
+                <div class="firstDiv">
+                    <ul>
+                        <li id="saleIn">
+                            <h3 class="mainh3"><a href="">Women: Get Inspired</a></h3>
+                        </li>
+                        <hr>
+                        <li>
+                            <h3><a href="">New Arrivals</a></h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Coming Soon: ASOS</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Black-Owned & Founded Brands</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Contemporary</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Cozy Shop</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Nodestrom Made</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Make it Pop-In @ Nodestrom</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="Sustainable Style">Sustainable Style</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="Wedding shop">Wedding shop</a>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Clothing</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Activewear</a>
+                        </li>
+                        <li>
+                            <a href="">Blazers</a>
+                        </li>
+                        <li>
+                            <a href="">Coats & jackets</a>
+                        </li>
+                        <li>
+                            <a href="">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="">Jeans & Denim</a>
+                        </li>
+                        <li>
+                            <a href="">Lingerie, Hosiery & Shapewere</a>
+                        </li>
+                        <li>
+                            <a href="">Loungewear</a>
+                        </li>
+                        <li>
+                            <a href="">Pants & leggings</a>
+                        </li>
+                        <li>
+                            <a href="">Shorts</a>
+                        </li>
+                        <li>
+                            <a href="">Skirts</a>
+                        </li>
+                        <li>
+                            <a href="">Sleepwear & Robes</a>
+                        </li>
+                        <li>
+                            <a href="">Sweaters</a>
+                        </li>
+                        <li>
+                            <a href="">Sweatshirts & Hoodies</a>
+                        </li>
+                        <li>
+                            <a href="">Swimsuits & Cover-Ups</a>
+                        </li>
+                        <li>
+                            <a href="">Tops</a>
+                        </li>
+                        <li class="topMargin">
+                            <a href="">Plus-size clothing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Shoes</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Booties</a>
+                        </li>
+                        <li>
+                            <a href="">Boots</a>
+                        </li>
+                        <li>
+                            <a href="">Comfort</a>
+                        </li>
+                        <li>
+                            <a href="">Flats</a>
+                        </li>
+                        <li>
+                            <a href="">Heels</a>
+                        </li>
+                        <li>
+                            <a href="">Mules & Slides</a>
+                        </li>
+                        <li>
+                            <a href="">Oxfords & Loafers</a>
+                        </li>
+                        <li>
+                            <a href="">Running Shoes</a>
+                        </li>
+                        <li>
+                            <a href="">Sandals</a>
+                        </li>
+                        <li>
+                            <a href="">Shoe Care & Accessories</a>
+                        </li>
+                        <li>
+                            <a href="">Slippers</a>
+                        </li>
+                        <li>
+                            <a href="">Sneakers & Athlitic</a>
+                        </li>
+                        <li>
+                            <a href="">Snow & Winter</a>
+                        </li>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Snakers Release Calender</a>
+                            </h3>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Handbags</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Backpages</a>
+                        </li>
+                        <li>
+                            <a href="">Belt Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Camera Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Bucket Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Clutches & Pouches</a>
+                        </li>
+                        <li>
+                            <a href="">Crossbody Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Designer Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Hobo Bags</a>
+                        </li>
+                        <li>
+                            <a href="">satchesls</a>
+                        </li>
+                        <li>
+                            <a href="">Tote Bags</a>
+                        </li>
+                        <li>
+                            <a href="">Wallets & Card Cases</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Jewelry</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Bracelets</a>
+                        </li>
+                        <li>
+                            <a href="">Earrings</a>
+                        </li>
+                        <li>
+                            <a href="">Necklaces</a>
+                        </li>
+                        <li>
+                            <a href="">Rings</a>
+                        </li>
+                        <li>
+                            <a href="">Watches</a>
+                        </li>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Fine Jewelry</a>
+                            </h3>
+                        <li>
+                            <a href="">Experience Fine Jewelry</a>
+                        </li>
+                        </li>
+                        <li>
+                            <h3 class="mainh3"><a href="">Accessories</a></h3>
+                        </li>
+                        <li>
+                            <a href="">Belts</a>
+                        </li>
+                        <li>
+                            <a href="">Face Masks</a>
+                        </li>
+                        <li>
+                            <a href="">Gloves & Mittens</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="marginRem">
+                    <div>
+                        <div>
+                            <a href="">
+                                <div>
+                                    <img src="https://n.nordstrommedia.com/id/6e9bba32-1568-47b3-8dcc-cdb0e42ab8c3.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="decor" href="">Gifts for Her</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="Men-content">
             <div>
                 <div class="firstDiv">
                     <ul>
                         <li id="saleIn">
-                            <h3 class="mainh3"><a href="">Sale: Get Inspired</a></h3>
+                            <h3 class="mainh3"><a href="">Men: Get Inspired</a></h3>
                         </li>
                         <hr>
                         <li>
-                            <h3><a href="">Bestsellers</a></h3>
+                            <h3><a href="">New Arrivals</a></h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">New Markdowns</a>
+                                <a href="">Coming Soon: ASOS</a>
                             </h3>
                         </li>
                         <li>
@@ -1049,30 +1335,30 @@
                 <div class="firstDiv">
                     <ul>
                         <li id="saleIn">
-                            <h3 class="mainh3"><a href="">Sale: Get Inspired</a></h3>
+                            <h3 class="mainh3"><a href="">Kids: Get Inspired</a></h3>
                         </li>
                         <hr>
                         <li>
-                            <h3><a href="">Bestsellers</a></h3>
+                            <h3><a href="">New Arrivals</a></h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">New Markdowns</a>
+                                <a href="">Black-Owned & Founded Brands</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Price Matched</a>
+                                <a href="">Designer</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Men's Designer Sale</a>
+                                <a href="">Everyday Basics</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Women's Designer Sale</a>
+                                <a href="">Kids' Looks</a>
                             </h3>
                         </li>
                     </ul>
@@ -1081,41 +1367,41 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Women</a>
+                                <a href="">All Girls</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Girls Clothing(Sizes 2T-6X)</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Girls Clothing(Sizes7-16)</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
-                        </li>
-                        <li>
-                            <a href="">Handbags & Wallets</a>
-                        </li>
-                        <li>
-                            <a href="">Jewelry</a>
+                            <a href="">Tween Girls</a>
                         </li>
                         <li>
                             <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Beauty</a>
+                            <a href="">Activewear</a>
                         </li>
                         <li>
-                            <a href="">Designer</a>
-                        </li>
-                        <li class="topMargin">
-                            <a href="">Plus</a>
+                            <a href="">Coats & jackets</a>
                         </li>
                         <li>
-                            <a href="">Petite</a>
+                            <a href="">Dresses & Rompers</a>
                         </li>
                         <li>
-                            <a href="">Maternity</a>
+                            <a href="">Face Masks</a>
+                        </li>
+                        <li>
+                            <a href="">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="">Leggings & Pants</a>
+                        </li>
+                        <li>
+                            <a href="">Pajamas & Robes</a>
                         </li>
                         <li>
                             <a href="">Juniors</a>
@@ -1126,37 +1412,37 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Men</a>
+                                <a href="">All Boys</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Boys Clothing(Sizes 2T-7)</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Boys Clothing(Sizes 8-20)</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Tween Boys</a>
                         </li>
                         <li>
                             <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Grooming & Cologne</a>
+                            <a href="">Activewear</a>
                         </li>
                         <li>
-                            <a href="">Designer</a>
+                            <a href="">Coats & jackets</a>
                         </li>
                         <li>
-                            <h3 class="mainh3">
-                                <a href="">Designer</a>
+                            <h3>
+                                <a href="">Face Masks</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">Women</a>
+                            <a href="">Jeans</a>
                         </li>
                         <li>
-                            <a href="">Men</a>
+                            <a href="">Pajamas & Robes</a>
                         </li>
                     </ul>
                 </div>
@@ -1164,26 +1450,31 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Kids</a>
+                                <a href="">Kids' Shoes</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Toddler(Sizes 7.5-12)</a>
                         </li>
                         <li>
-                            <a href="">Girls</a>
+                            <a href="">Little Kid(Sizes 12.5-3)</a>
                         </li>
                         <li>
-                            <a href="">Boys</a>
+                            <a href="">Big Kid(Sizes 3.5-7)</a>
                         </li>
                         <li>
-                            <a href="">Baby</a>
+                            <h3>
+                                <a href="">Girls' Shoes</a>
+                            </h3>
                         </li>
                         <li>
-                            <a href="">Baby Gear & Essentials</a>
+                            <a href="">Toddler(Sizes 7.5-12)</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Little Kid(Sizes 12.5-3)</a>
+                        </li>
+                        <li>
+                            <a href="">Big Kid(Sizes 3.5-7)</a>
                         </li>
                     </ul>
                 </div>
@@ -1191,29 +1482,30 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Home</a>
+                                <a href="">Baby Clothing</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Bedding & Bath</a>
+                            <a href="">Baby Girl Clothing</a>
                         </li>
                         <li>
-                            <a href="">Home Decor</a>
+                            <a href="">Gender Neutral Baby Clothing</a>
                         </li>
                         <li>
                             <a href="">Electronics & Tech Accessories</a>
                         </li>
                         <li>
-                            <a href="">Luggage & Travel</a>
+                            <a href="">Baby Shower Gifts</a>
                         </li>
                         <li>
-                            <a href="">Tabletop & Kitchen</a>
+                            <h3>
+                                <a href=""> Baby Gear & Essentials</a>
                         </li>
                         <li>
-                            <h3 class="mainh3"><a href="">Beauty</a></h3>
+                            <a href="">Baby Carriers</a>
                         </li>
                     </ul>
                 </div>
@@ -1222,7 +1514,7 @@
                         <div>
                             <a href="">
                                 <div>
-                                    <img src="https://n.nordstrommedia.com/id/faae0c02-a9a9-427d-b69e-ce5fbd38e500.png">
+                                    <img src="https://n.nordstrommedia.com/id/fd8dc984-98ae-436a-848a-389ed2df5467.png">
                                 </div>
                             </a>
                         </div>
@@ -1899,30 +2191,50 @@
                 <div class="firstDiv">
                     <ul>
                         <li id="saleIn">
-                            <h3 class="mainh3"><a href="">Sale: Get Inspired</a></h3>
+                            <h3 class="mainh3"><a href="">Beauty: Get Inspired</a></h3>
                         </li>
                         <hr>
                         <li>
-                            <h3><a href="">Bestsellers</a></h3>
+                            <h3><a href="">New Arrivals</a></h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">New Markdowns</a>
+                                <a href="">Allure Best of Beayty</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Price Matched</a>
+                                <a href="">Beauty Looks</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Men's Designer Sale</a>
+                                <a href="">Beauty Services, Stylists & Videos</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Women's Designer Sale</a>
+                                <a href="">Black-Owned & - Founded Brands</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Gifts with Purchases</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Holiday Gifts & Sets</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Inclusive Beauty</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="">Make it Pop-In @ Nordstrom</a>
                             </h3>
                         </li>
                     </ul>
@@ -1931,44 +2243,44 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Women</a>
+                                <a href="">Beauty Brands</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Bobbi Brown</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">CHANEL</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Charlotte Tilbury</a>
                         </li>
                         <li>
-                            <a href="">Handbags & Wallets</a>
+                            <a href="">Clinique</a>
                         </li>
                         <li>
-                            <a href="">Jewelry</a>
+                            <a href="">Dior</a>
                         </li>
                         <li>
-                            <a href="">Accessories</a>
+                            <a href="">Dyson</a>
                         </li>
                         <li>
-                            <a href="">Beauty</a>
+                            <a href="">Estee Lauder</a>
                         </li>
                         <li>
-                            <a href="">Designer</a>
-                        </li>
-                        <li class="topMargin">
-                            <a href="">Plus</a>
+                            <a href="">Jo Malone London</a>
                         </li>
                         <li>
-                            <a href="">Petite</a>
+                            <a href="">Kiehl's Since 1851</a>
                         </li>
                         <li>
-                            <a href="">Maternity</a>
+                            <a href="">La Mer</a>
                         </li>
                         <li>
-                            <a href="">Juniors</a>
+                            <a href="">Lancome</a>
+                        </li>
+                        <li>
+                            <a href="">Le Labo</a>
                         </li>
                     </ul>
                 </div>
@@ -1976,37 +2288,35 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Men</a>
+                                <a href="">Makeup</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Blush</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Bronzer</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Brushes & Tools</a>
                         </li>
                         <li>
-                            <a href="">Accessories</a>
+                            <a href="">Concealer</a>
                         </li>
                         <li>
-                            <a href="">Grooming & Cologne</a>
+                            <a href="">Eyebrowns</a>
                         </li>
                         <li>
-                            <a href="">Designer</a>
+                            <a href="">Eyeliner</a>
                         </li>
                         <li>
-                            <h3 class="mainh3">
-                                <a href="">Designer</a>
-                            </h3>
+                            <a href="">Eyeshadow</a>
                         </li>
                         <li>
-                            <a href="">Women</a>
+                            <a href="">Foundation</a>
                         </li>
                         <li>
-                            <a href="">Men</a>
+                            <a href="">Gifts & Sets</a>
                         </li>
                     </ul>
                 </div>
@@ -2014,26 +2324,32 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Kids</a>
+                                <a href="">Skin Care</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Cleansers</a>
                         </li>
                         <li>
-                            <a href="">Girls</a>
+                            <a href="">Exfoliators & Peels</a>
                         </li>
                         <li>
-                            <a href="">Boys</a>
+                            <a href="">Eye Creams & Treatments</a>
                         </li>
                         <li>
-                            <a href="">Baby</a>
+                            <a href="">Facial Masks</a>
                         </li>
                         <li>
-                            <a href="">Baby Gear & Essentials</a>
+                            <a href="">Face Mists & Essences </a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Face Mositurizers </a>
+                        </li>
+                        <li>
+                            <a href="">Gifts & Sets </a>
+                        </li>
+                        <li>
+                            <a href="">Lip Balms</a>
                         </li>
                     </ul>
                 </div>
@@ -2041,29 +2357,29 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Home</a>
+                                <a href="">Fragrance</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Candles & Diffusers</a>
                         </li>
                         <li>
-                            <a href="">Bedding & Bath</a>
+                            <a href="">Gifts & Sets</a>
                         </li>
                         <li>
-                            <a href="">Home Decor</a>
+                            <a href="">Perfume</a>
                         </li>
                         <li>
-                            <a href="">Electronics & Tech Accessories</a>
+                            <a href="">Rollerball & Travel Size</a>
                         </li>
                         <li>
-                            <a href="">Luggage & Travel</a>
+                            <h3 class="mainh3"><a href="">Hair Care</a></h3>
                         </li>
                         <li>
-                            <a href="">Tabletop & Kitchen</a>
+                            <a href="">Hair & Scalp Treatments</a>
                         </li>
                         <li>
-                            <h3 class="mainh3"><a href="">Beauty</a></h3>
+                            <a href="">Hair Dryers & Styling Tools</a>
                         </li>
                     </ul>
                 </div>
@@ -2090,31 +2406,73 @@
                 <div class="firstDiv">
                     <ul>
                         <li id="saleIn">
-                            <h3 class="mainh3"><a href="">Sale: Get Inspired</a></h3>
+                            <h3 class="mainh3"><a href="">Designer: Get Inspired</a></h3>
                         </li>
                         <hr>
                         <li>
-                            <h3><a href="">Bestsellers</a></h3>
+                            <h3><a href="">Designer New Arrivals</a></h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">New Markdowns</a>
+                                <a href="">Designer Home</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Price Matched</a>
+                                <a href="">Designer Sale</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Men's Designer Sale</a>
+                                <a href="">Holiday Gifts from SPACE</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Women's Designer Sale</a>
+                                <a href="">New Concept: Make it Bazaar</a>
                             </h3>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Designer Brands</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Alexander McQueen</a>
+                        </li>
+                        <li>
+                            <a href="">Balenciage</a>
+                        </li>
+                        <li>
+                            <a href="">Bottega Veneta</a>
+                        </li>
+                        <li>
+                            <a href="">Brunello Cucinelli</a>
+                        </li>
+                        <li>
+                            <a href="">Burberry</a>
+                        </li>
+                        <li>
+                            <a href="">Christian Louboutin</a>
+                        </li>
+                        <li>
+                            <a href="">Fendi</a>
+                        </li>
+                        <li>
+                            <a href="">Givenchy</a>
+                        </li>
+                        <li>
+                            <a href="">Golden Goose</a>
+                        </li>
+                        <li>
+                            <a href="">Gucci</a>
+                        </li>
+                        <li>
+                            <a href="">Moncler</a>
                         </li>
                     </ul>
                 </div>
@@ -2126,132 +2484,96 @@
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Designer Clothing</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Designer Shoes</a>
                         </li>
                         <li>
-                            <a href="">Shoes</a>
+                            <a href="">Designer Handbags</a>
                         </li>
                         <li>
-                            <a href="">Handbags & Wallets</a>
+                            <a href="">Designer Jewelry</a>
                         </li>
                         <li>
-                            <a href="">Jewelry</a>
+                            <a href="">Designer Accessories</a>
                         </li>
-                        <li>
-                            <a href="">Accessories</a>
-                        </li>
-                        <li>
-                            <a href="">Beauty</a>
-                        </li>
-                        <li>
-                            <a href="">Designer</a>
-                        </li>
-                        <li class="topMargin">
-                            <a href="">Plus</a>
-                        </li>
-                        <li>
-                            <a href="">Petite</a>
-                        </li>
-                        <li>
-                            <a href="">Maternity</a>
-                        </li>
-                        <li>
-                            <a href="">Juniors</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
                         <li>
                             <h3 class="mainh3">
                                 <a href="">Men</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">Designer Clothing</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Designer Shoes</a>
+                        </li>
+                        <li>
+                            <a href="">Designer Accessories</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">SPACE: Emerging & Advanced Designer</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Ready-to-wear</a>
                         </li>
                         <li>
                             <a href="">Shoes</a>
+                        </li>
+                        <li>
+                            <a href="">Handbags</a>
+                        </li>
+                        <li>
+                            <a href="">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="">The Extra</a>
+                        </li>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <h3 class="mainh3">
+                                <a href="">Men's Emerging & Advanced Designer</a>
+                            </h3>
+                        </li>
+                        <li>
+                            <a href="">Readt-to-Wear</a>
                         </li>
                         <li>
                             <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Grooming & Cologne</a>
-                        </li>
-                        <li>
-                            <a href="">Designer</a>
-                        </li>
-                        <li>
-                            <h3 class="mainh3">
-                                <a href="">Designer</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <a href="">Women</a>
-                        </li>
-                        <li>
-                            <a href="">Men</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <h3 class="mainh3">
-                                <a href="">Kids</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <a href="">New Markdowns</a>
-                        </li>
-                        <li>
-                            <a href="">Girls</a>
-                        </li>
-                        <li>
-                            <a href="">Boys</a>
-                        </li>
-                        <li>
-                            <a href="">Baby</a>
-                        </li>
-                        <li>
-                            <a href="">Baby Gear & Essentials</a>
-                        </li>
-                        <li>
                             <a href="">Shoes</a>
                         </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Home</a>
+                                <a href="">Men's Emerging & Advanced Designer Brands</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">New Markdowns</a>
+                            <a href="">AMI</a>
                         </li>
                         <li>
-                            <a href="">Bedding & Bath</a>
+                            <a href="">Alexander Mattiussi</a>
                         </li>
                         <li>
-                            <a href="">Home Decor</a>
+                            <a href="">Fear of God</a>
                         </li>
                         <li>
-                            <a href="">Electronics & Tech Accessories</a>
-                        </li>
-                        <li>
-                            <a href="">Luggage & Travel</a>
-                        </li>
-                        <li>
-                            <a href="">Tabletop & Kitchen</a>
+                            <a href="">Homme Plisse</a>
                         </li>
                         <li>
                             <h3 class="mainh3"><a href="">Beauty</a></h3>
@@ -2263,7 +2585,7 @@
                         <div>
                             <a href="">
                                 <div>
-                                    <img src="https://n.nordstrommedia.com/id/faae0c02-a9a9-427d-b69e-ce5fbd38e500.png">
+                                    <img src="https://n.nordstrommedia.com/id/55fe8c4a-a76f-489d-ad60-831bad73392a.jpg">
                                 </div>
                             </a>
                         </div>
@@ -2279,25 +2601,24 @@
 </body>
 <script>
     function dropDown(a) {
-
         var show1 = document.querySelector("#main-content")
         var show = document.querySelector(`.${a}-content`)
         show1.style.display = "block";
         // show.style.display="block";
         show.style.height = "500px"
 
-        var rem = document.getElementsByClassName("categoryType")
+        var ele = document.getElementsByClassName("categoryType")
 
-        for (var i = 0; i < rem.length; i++) {
-            if (rem[i].textContent != a) {
-                var remo = document.querySelector(`.${rem[i].textContent}-content`)
-                remo.style.height = "0px";
+        for (var i = 0; i < ele.length; i++) {
+            if (ele[i].textContent != a) {
+                var eremo = document.querySelector(`.${ele[i].textContent}-content`)
+                eremo.style.height = "0px";
 
-                rem[i].style.color = "rgba(0, 0, 0, 0.3)"
-                rem[i].style.textDecoration = "none"
+                ele[i].style.color = "rgba(0, 0, 0, 0.3)"
+                ele[i].style.textDecoration = "none"
             } else {
-                rem[i].style.color = "#393939"
-                rem[i].style.textDecoration = "underline"
+                ele[i].style.color = "#393939"
+                ele[i].style.textDecoration = "underline"
             }
         }
     }
@@ -2325,9 +2646,7 @@
     function removeDropdown() {
         var show = document.querySelector("#main-content")
         show.style.display = "none";
-
         var reset = document.getElementsByClassName("categoryType")
-
         for (var i = 0; i < reset.length; i++) {
             if (reset[i].textContent != "Sale") {
                 reset[i].style.color = "#393939"
@@ -2337,5 +2656,3 @@
     }
 
 </script>
-
-</html>
