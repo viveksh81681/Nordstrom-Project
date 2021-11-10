@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    #productboxs {
+        width: 100%;
+        height: 100%;
+       
+        display: flex;
+    }
+
+    #leftBoxs {
+        height: 100%;
+        width: 20%;
+       
+    }
+
+    #rightBoxs {
+        width: 80%;
+        height: 100%;
+      
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .imgaClass {
+        max-width: 300px;
+       
+        margin-left: 20px;
+    }
+
+    .imgaDivClass {
+        /* max-width: 300px; */
+       
+        /* margin-left: 20px; */
+    }
+
+    .p1sClass {
+        color: #393939;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .p2sClass {
+        color: #393939;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .p3sClass {
+        color: #393939;
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 20px;
+    }
+
+    .p4sClass {
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+    <div id="productboxs">
+        <div id="leftBoxs"></div>
+        <div id="rightBoxs"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var data = [
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/1aa2363e-92cd-4a09-91be-7874d3280040.jpeg?h=365&w=240&dpr=2",
+            productType: "Neumal Chukka Boot",
+            // prodSubType: "Live In Pocket Joggers",
+            MRPs: "$29.90",
+            Stars: "★★★★★",
+            // Deliver : "Free Delivery",
+
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/1d04ee9d-2bfe-401e-8ef0-c7bc3ad14902.jpeg?h=365&w=240&dpr=2",
+            productType: "UGG Emmet Waterproof Snow Boot",
+            MRPs: "INR 10,436.74",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Timberland",
+            productImage: "https://n.nordstrommedia.com/id/sr3/af5b3656-2110-4c8d-9bfd-04a059b9ca65.jpeg?h=365&w=240&dpr=2",
+            productType: "6 Inch Premium Waterproof Boot (Men)",
+            MRPs: "INR 15,895.95",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "AllSaints",
+            productImage: "https://n.nordstrommedia.com/id/sr3/21e7a67c-0a54-4d09-a4a4-6a0e0840540b.jpeg?h=365&w=240&dpr=2",
+            productType: "Whitmore Moto Boot(Men)",
+            MRPs: "INR 13,640.01",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/fbf8e613-9362-4d4b-9f02-a22d737876cf.jpeg?h=365&w=240&dpr=2",
+            productType: "Neumal Chelsea Boot",
+            MRPs: "INR 10,436.74",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/3ef1045b-6233-42de-ae07-13bc4cdb301b.jpeg?h=365&w=240&dpr=2",
+            productType: "Union WaterProof of Chukka",
+            MRPs: "INR 12,038.38 – INR 12,042.39",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Nordstrom",
+            productImage: "https://n.nordstrommedia.com/id/sr3/29aa6d93-79d3-4f0b-9b7f-777e36ac179b.jpeg?h=365&w=240&dpr=2",
+            productType: "Mason Water Resistent Chelsea",
+            MRPs: "INR 9,629.90",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Dr. Martens",
+            productImage: "https://n.nordstrommedia.com/id/sr3/fdde3f1d-1ca6-4014-b6c9-9803f4e95cc3.jpeg?h=365&w=240&dpr=2",
+            productType: "1460's Boot",
+            MRPs: "INR 12,042.39",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "AllSaints",
+            productImage: "https://n.nordstrommedia.com/id/sr3/d7aed55b-1ae4-444d-999e-0ecce6ee3de8.jpeg?h=365&w=240&dpr=2",
+            productType: "Union WaterProof of Chukka",
+            MRPs: "INR 13,640.01",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Dr. Martens",
+            productImage: "https://n.nordstrommedia.com/id/sr3/40c9bdea-3db4-4962-98e8-278894f857c3.jpeg?h=365&w=240&dpr=2",
+            productType: "Water Resistent Chelsea",
+            MRPs: "INR 11,235.55 – INR 11,239.56",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "BP",
+            productImage: "https://n.nordstrommedia.com/id/sr3/23f2476f-551d-4c5c-b068-9dc731be31e1.jpeg?h=365&w=240&dpr=2",
+            productType: "1460's Boot",
+            MRPs: "INR 14,049.46",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/bff12a7c-4f87-4348-a67b-de5002fa454b.jpeg?h=365&w=240&dpr=2",
+            productType: "6 Inch Premium Waterproof Boot (Men)",
+            MRPs: "INR 18,059.57",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "BP.",
+            productImage: "https://n.nordstrommedia.com/id/sr3/6e3bb5c6-3ae0-44d6-84d2-5f8fa6b281ea.jpeg?h=365&w=240&dpr=2",
+            productType: "Neumal Chelsea Boot",
+            MRPs: "INR 4,006.10 – INR 4,332.05",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Hunter",
+            productImage: "https://n.nordstrommedia.com/id/sr3/7e2b0c84-f99d-4af8-bf79-5f8ab8f61382.jpeg?h=365&w=240&dpr=2",
+            productType: "Neumal Chelsea Boot",
+            MRPs: "INR 10,838.15 – INR 11,239.56",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Blondo",
+            productImage: "https://n.nordstrommedia.com/id/sr3/8a969682-a43a-4690-ac98-fec373356e42.jpeg?h=365&w=240&dpr=2",
+            productType: "Neumal Chelsea Boot",
+            MRPs: "INR 7,225.43",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/01f54b31-788f-4a2c-968f-aca03989bfdc.jpeg?h=365&w=240&dpr=2",
+            productType: "Whitmore Moto Boot(Men)",
+            MRPs: "INR 12,042.39",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "SOREL",
+            productImage: "https://n.nordstrommedia.com/id/sr3/85401197-ca5e-43be-a328-e84e21f10c91.jpeg?h=365&w=240&dpr=2",
+            productType: "Premium Waterproof Boot (Men)",
+            MRPs: "INR 14,450.87",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Dr. Martens",
+            productImage: "https://n.nordstrommedia.com/id/sr3/9dfccdbe-3117-4bff-8074-662e31c23a45.jpeg?h=365&w=240&dpr=2",
+            productType: "Premium Waterproof Boot (Men)",
+            MRPs: "INR 14,049.46",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "UGG®",
+            productImage: "https://n.nordstrommedia.com/id/sr3/4fbf9da8-2a28-4fdc-9200-02d9b8c207cc.jpeg?h=365&w=240&dpr=2",
+            productType: "Resistent Chelsea",
+            MRPs: "INR 20,070.65",
+            Stars: "★★★★★",
+        },
+        {
+            productName: "Converse",
+            productImage: "https://n.nordstrommedia.com/id/sr3/90f1c4f5-f436-4694-ae42-dc3ca8296e1d.jpeg?h=365&w=240&dpr=2",
+            productType: "Mason Water Resistent Chelsea",
+            MRPs: "INR 7,221.42",
+            Stars: "★★★★★",
+        },
+
+    ]
+
+
+    var rightBox = document.querySelector("#rightBoxs");
+
+    productList();
+
+    function productList() {
+        data.map(function (item) {
+            var imgDiv = document.createElement("div");
+            imgDiv.setAttribute("class", "imgaDivClass");
+            var img = document.createElement("img");
+            img.setAttribute("class", "imgaClass")
+            img.setAttribute("src", item.productImage);
+            var p1 = document.createElement("div");
+            p1.setAttribute("class", "p1sClass");
+            p1.textContent = item.productName;
+            var p2 = document.createElement("h4");
+            p2.setAttribute("class", "p2sClass");
+            p2.textContent = item.productType;
+            var p3 = document.createElement("div");
+            p3.setAttribute("class", "p3sClass");
+            p3.textContent = item.MRPs;
+            var p4 = document.createElement("div");
+            p4.setAttribute("class", "p4sClass");
+            p4.textContent = item.Stars;
+            // var p5 = document.createElement("li");
+            // p5.setAttribute("class","p5Class");
+            // p5.textContent = item.Deliver;
+            imgDiv.append(img, p1, p2, p3, p4);
+            rightBox.append(imgDiv);
+        })
+    }
+    var rightBoxChild = document.createElement("");
+
+
+
+
+</script>
