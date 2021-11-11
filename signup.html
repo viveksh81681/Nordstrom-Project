@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Nordstorm</title>
+    <style>
+        #container{
+           height:500px;
+           width:500px;
+          margin-left: 30%;
+           margin-top: 200px;
+           
+           }
+        
+           #container>p{
+               color: #8e8e8e;
+
+           }
+
+          button{
+          width:80%;
+           height: 35px;
+          font:25px;
+          background-color:black;
+          color: white;
+          margin-top: 10px;
+        }
+      
+        input{
+         width: 75%;
+         padding: 10px;
+       
+   
+         
+        }
+        p>span{
+        text-decoration: underline;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id = "container">
+    <h1>SignIn | Create Account</h1>
+    <p>Enter your email to get started.</p>
+    <h5>Email</h5>
+    <input id = "email" type="email" placeholder=""/>
+    <p>By tapping Next, you agree to our <span>Privacy Policy</span> and <span>Terms & <br/>Conditions.</span></p>
+    <button>Next</button>
+    </div>
+    
+</body>
+</html>
+<script>
+     document.querySelector("button").addEventListener("click" , signUp);
+    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+    
+    function signUp(e){
+        e.preventDefault();
+        var email = document.getElementById("email").value;
+        var UserCredentials = {
+            email:email,
+
+        };
+        // for(var i = 0;i<userArr.length;i++){
+        //     if (userArr[i].email == email )
+        //     {
+        //         console.log("efe");
+        //         window.location.href = "signin.html";
+        //     }else
+        userArr.push( UserCredentials);
+        localStorage.setItem("userData", JSON.stringify(userArr));
+        
+         window.location.href = "signup1.html";
+
+    
+}
+    
+
+</script>
