@@ -2,43 +2,15 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordstrom Online & In Store: Shoes, Jewelry, Clothing, Makeup, Dresses</title>
+    <link rel="icon" href="https://n.nordstrommedia.com/id/c4fb2a09-3657-4161-9b79-6412897d9399.png"
+        type="image/x-icon">
 
-    <title>Nordstorm</title>
+
     <style>
-        #container {
-            height: 500px;
-            width: 500px;
-            margin-left: 30%;
-            margin-top: 200px;
-
-        }
-
-        #container>p {
-            color: #8e8e8e;
-
-        }
-
-        button {
-            width: 80%;
-            height: 35px;
-            font: 25px;
-            background-color: black;
-            color: white;
-            margin-top: 10px;
-        }
-
-        input {
-            width: 75%;
-            padding: 10px;
-
-
-
-        }
-
-        p>span {
-            text-decoration: underline;
-        }
-
         #firstbar {
             background-color: black;
             text-align: center;
@@ -424,8 +396,7 @@
     </style>
 </head>
 
-<body>
-
+<body onclick="removeDropdown()">
 
     <div id="firstbar">
         <div>
@@ -2681,20 +2652,7 @@
             </div>
         </div>
     </div>
-
-
-    <div id="container">
-        <h1>SignIn | Create Account</h1>
-        <p>Enter your email to get started.</p>
-        <h5>Email</h5>
-        <input id="email" type="email" placeholder="" />
-        <p>By tapping Next, you agree to our <span>Privacy Policy</span> and <span>Terms & <br />Conditions.</span></p>
-        <button>Next</button>
-    </div>
-
 </body>
-
-</html>
 <script>
     function dropDown(a) {
         var show1 = document.querySelector("#main-content")
@@ -2750,31 +2708,5 @@
             reset[i].style.textDecoration = "none"
         }
     }
-
-
-    document.querySelector("button").addEventListener("click", signUp);
-    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
-
-    function signUp(e) {
-        e.preventDefault();
-        var email = document.getElementById("email").value;
-        var UserCredentials = {
-            email: email,
-
-        };
-        // for(var i = 0;i<userArr.length;i++){
-        //     if (userArr[i].email == email )
-        //     {
-        //         console.log("efe");
-        //         window.location.href = "signin.html";
-        //     }else
-        userArr.push(UserCredentials);
-        localStorage.setItem("userData", JSON.stringify(userArr));
-
-        window.location.href = "signup1.html";
-
-
-    }
-
 
 </script>

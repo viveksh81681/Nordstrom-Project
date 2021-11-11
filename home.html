@@ -2,48 +2,20 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordstrom Online & In Store: Shoes, Jewelry, Clothing, Makeup, Dresses</title>
+    <link rel="icon" href="https://n.nordstrommedia.com/id/c4fb2a09-3657-4161-9b79-6412897d9399.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 
-    <title>Nordstorm</title>
     <style>
-        #container {
-            height: 500px;
-            width: 500px;
-            margin-left: 30%;
-            margin-top: 200px;
-
-        }
-
-        #container>p {
-            color: #8e8e8e;
-
-        }
-
-        button {
-            width: 80%;
-            height: 35px;
-            font: 25px;
-            background-color: black;
-            color: white;
-            margin-top: 10px;
-        }
-
-        input {
-            width: 75%;
-            padding: 10px;
-
-
-
-        }
-
-        p>span {
-            text-decoration: underline;
-        }
-
         #firstbar {
             background-color: black;
             text-align: center;
             color: white;
-            font-size: 18px;
+            font-size: 13px;
             font-weight: 400;
             letter-spacing: 0.15px;
         }
@@ -55,8 +27,7 @@
 
         #firstbar p {
             float: left;
-            margin-left: 700px;
-
+            margin-left: 500px;
         }
 
         #firstbar button {
@@ -65,11 +36,11 @@
             background-color: black;
             border: none;
             cursor: pointer;
-            font-size: 13px;
+            font-size: 12px;
             margin-top: 10px;
         }
 
-        #firstbar div button img {
+        #firstbar button img {
             height: 15px;
             width: 15px;
             border-radius: 50%;
@@ -77,8 +48,8 @@
             margin-top: 5px;
         }
 
-        #firstbar div button span {
-            /* vertical-align: top; */
+        #firstbar span {
+            vertical-align: top;
             margin-top: 15px;
         }
 
@@ -123,7 +94,7 @@
             color: #393939;
             font-family: Brandon Text, Arial, sans-serif;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 13px;
             transition-duration: 1s;
         }
 
@@ -149,19 +120,12 @@
 
         #bag {
             width: 15% !important;
-            height: 50px !important;
-
 
         }
 
         #bag img {
             width: 100%;
             margin-top: 3px;
-        }
-
-        #bag-image {
-            width: 100%;
-            height: 40px;
         }
 
         #one,
@@ -297,7 +261,6 @@
             margin-top: 25px;
             /* margin-left: 60px;
         } */
-            font-size: 70px;
         }
 
         .black-content>div,
@@ -350,7 +313,7 @@
         .Beauty-content a,
         .Designer-content a {
             color: #393939;
-            font-size: 18px;
+            font-size: 13px;
             line-height: 1.4;
             text-decoration: none;
         }
@@ -366,7 +329,7 @@
         .Home-content li>a,
         .Beauty-content li>a,
         .Designer-content li>a {
-            font-size: 18px;
+            font-size: 12px;
         }
 
         .black-content li,
@@ -421,11 +384,508 @@
         ul {
             list-style-type: none
         }
+
+        #blackFriday {
+            margin: auto;
+            width: 98%;
+            height: 80px;
+
+
+
+        }
+
+        .veryUsedText {
+            font-size: 20px;
+            color: #676767;
+            margin: auto;
+            text-align: center;
+        }
+
+        #grids1 {
+            margin: auto;
+            width: 98%;
+            display: grid;
+            gap: 10px;
+
+            height: 1000px;
+            grid-template-areas: "ph1 ph1 ph2""ph3 ph3 ph2""ph3 ph3 ph2""ph3 ph3 ph2""ph3 ph3 ph2""ph3 ph3 ph2""ph3 ph3 ph2";
+        }
+
+        #photu1 {
+            grid-area: ph1;
+
+
+        }
+
+        #photu2 {
+            grid-area: ph2;
+
+
+        }
+
+        #photu3 {
+            grid-area: ph3;
+
+            background-image: url("https://n.nordstrommedia.com/id/f8f9d84d-e874-43fa-a827-8a5f9358d0e8.gif?h=270&w=1072");
+            background-size: 100% 100%;
+        }
+
+        #tisThe {
+            margin: auto;
+
+            margin-top: 250px;
+            width: 60%;
+            height: 60px;
+            text-align: center;
+        }
+
+        .broad-Img {
+            height: 200px;
+            width: 98%;
+            border: 1px solid #FFFFFF;
+            margin: auto;
+            background-image: url("https://n.nordstrommedia.com/id/2ebf2b0d-7f74-4013-b803-4c098f0a039c.gif?h=159&w=1072");
+            background-size: cover;
+        }
+
+        #onlyMargin {
+            margin-top: 90px;
+        }
+
+        #threeImages {
+            display: grid;
+
+            margin: auto;
+            width: 98%;
+            height: 750px;
+            gap: 10px;
+            grid-template-areas: "lq1 lq2 lq3";
+        }
+
+        #photus1 {
+            grid-area: lq1;
+            height: 100%;
+
+        }
+
+        #photus2 {
+            grid-area: lq2;
+
+            height: 100%;
+        }
+
+        #photus3 {
+            grid-area: lq3;
+
+            height: 100%;
+        }
+
+        #threeSmallImage {
+            display: grid;
+            height: 200px;
+            gap: 10px;
+            margin: auto;
+            width: 98%;
+
+            grid-template-areas: "mn1 mn2 mn3";
+        }
+
+        #photuss1 {
+            grid-area: mn1;
+            height: 100%
+        }
+
+        #photuss2 {
+            grid-area: mn2;
+            height: 100%
+        }
+
+        #photuss3 {
+            grid-area: mn3;
+            height: 100%
+        }
+
+        #randomName {
+            display: grid;
+            height: 700px;
+            margin: auto;
+            width: 98%;
+            gap: 10px;
+            grid-template-areas: "gta1 gta2 gta2""gta3 gta2 gta2";
+        }
+
+        #gta1 {
+            grid-area: gta1;
+
+        }
+
+        #gta2 {
+            grid-area: gta2;
+
+        }
+
+        #gta3 {
+            grid-area: gta3;
+
+        }
+
+        #divForText {
+            margin: auto;
+            width: 98%;
+            height: 200px;
+        }
+
+        #theBestGift {
+            margin: auto;
+            color: #393939;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        #vice {
+            display: grid;
+            margin: auto;
+            width: 98%;
+            height: 840px;
+
+            gap: 10px;
+            grid-template-areas: "vc1 vc1 vc2 vc2""vc1 vc1 vc2 vc2""vc1 vc1 vc2 vc2""vc3 vc3 vc4 vc4";
+
+        }
+
+        #vice1 {
+            grid-area: vc1;
+
+
+        }
+
+        #vice2 {
+            grid-area: vc2;
+
+        }
+
+        #vice3 {
+            grid-area: vc3;
+
+        }
+
+        #vice4 {
+            grid-area: vc4;
+
+        }
+
+        .giftsat {
+            font-size: 23px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .giftsat1 {
+            font-size: 20px;
+
+        }
+
+        #addedImage1 {
+            height: 410px;
+            width: 98%;
+            margin: auto;
+            border: 1px solid wheat;
+            background-image: url("https://n.nordstrommedia.com/id/30c5bdfe-8b21-4833-9f56-b9c3746f843e.png?h=320&w=1608");
+            background-size: 100% 100%;
+        }
+
+        #veryNewText {
+            margin: auto;
+            text-align: center;
+            font-size: 25px;
+            margin-top: 262px;
+            color: gray;
+        }
+
+        .inlineBlock {
+            display: inline-block;
+            font-size: 25px;
+            margin-right: 20px;
+            color: gray;
+
+
+
+        }
+
+        .genText {
+            text-align: center;
+            font-size: 30px;
+            color: #393939;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #broadImg {
+            width: 95%;
+            margin: auto;
+            height: 420px;
+            vertical-align: top;
+            border: 1px solid wheat;
+            background-image: url("https://n.nordstrommedia.com/id/cc17da94-77dd-4875-89da-5b64ddab28e1.jpeg?h=400&w=1608");
+            background-size: cover;
+        }
+
+        #intextImg {
+            color: white;
+            margin: auto;
+            width: 650px;
+            height: 200px;
+            margin-top: 180px;
+            text-align: center;
+        }
+
+        #wishes {
+            border: 1px solid wheat;
+            width: 95%;
+            height: 250px;
+            margin: auto;
+            background-image: url("https://n.nordstrommedia.com/id/04db1e88-e25c-4762-90e8-2192df10333d.png?h=200&w=1608");
+
+        }
+
+        #wishInside {
+            color: white;
+            width: 57%;
+            height: 60%;
+            margin: auto;
+            margin-top: 40px;
+
+            text-align: left;
+
+        }
+
+        #shoppingItems {
+
+            display: grid;
+            height: 705px;
+            margin: auto;
+            width: 95%;
+            grid-template-areas: "a1 a2 a3 a4 a5";
+        }
+
+        #lb1 {
+            grid-area: a1;
+            height: 100%;
+
+        }
+
+        #lb2 {
+
+            grid-area: a2;
+            height: 100%;
+
+
+        }
+
+        #lb3 {
+            grid-area: a3;
+            height: 100%;
+
+        }
+
+        #lb4 {
+            grid-area: a4;
+            height: 100%;
+
+        }
+
+        #lb5 {
+            grid-area: a5;
+            height: 100%;
+
+        }
+
+        .itemsImage {
+
+            height: 75%;
+            width: 100%;
+        }
+
+        .itemsAbout {
+            padding-left: 10px;
+            width: 100%;
+            height: 24%
+        }
+
+        .nameText {
+            color: grey;
+        }
+
+        .priceText {
+            color: #393939;
+        }
+
+        #styleHelp {
+            width: 95%;
+            height: 400px;
+            background-image: url("https://n.nordstrommedia.com/id/eea8b6ce-6ce9-4064-af87-5a45a355a8f0.jpeg?h=400&w=1608");
+            border: 1px solid #F9F9F9;
+            background-size: cover;
+            margin: auto;
+        }
+
+        #helpInside {
+            width: 50%;
+            height: 30%;
+            margin: auto;
+            margin-top: 150px;
+
+        }
+
+        #shopCate {
+            display: grid;
+            margin: auto;
+            width: 95%;
+            height: 400px;
+
+            gap: 10px;
+            grid-template-areas: "b1 b2 b3 b4 b5 b6";
+        }
+
+        #rb1 {
+            grid-area: b1;
+            height: 100%;
+
+        }
+
+        #rb2 {
+            grid-area: b2;
+            height: 100%;
+
+        }
+
+        #rb3 {
+            grid-area: b3;
+            height: 100%;
+
+        }
+
+        #rb4 {
+            grid-area: b4;
+            height: 100%;
+
+        }
+
+        #rb5 {
+            grid-area: b5;
+            height: 100%;
+
+        }
+
+        #rb6 {
+            grid-area: b6;
+            height: 100%;
+
+        }
+
+        #addImg {
+            border: 1px solid #6F2B62;
+            height: 650px;
+            width: 95%;
+            margin: auto;
+            background-image: url("https://n.nordstrommedia.com/id/8be5529c-c9e9-4b3b-a5bb-df84f75f6270.jpeg?h=600&w=1608");
+            background-size: cover;
+        }
+
+        #imgBooth {
+
+            margin-left: 150px;
+            height: 120px;
+            width: 600px;
+            margin-top: 310px;
+        }
+
+        .g {
+            background-image: url(https://n.nordstrommedia.com/id/182e11e3-2b67-4e28-8170-e01e1b7358be.png?h=200&w=1608);
+
+        }
+
+        .heading1 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px 0px 0px 20px;
+            color: darkslategray;
+        }
+
+        .flexbox {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 20px;
+            height: 800px;
+            width: 98%;
+            background-color: whitesmoke;
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+
+
+        }
+
+        .flexbox div {
+            background-color: white;
+            width: 16%;
+            height: 60%;
+        }
+
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            display: flex;
+            background-color: whitesmoke;
+
+        }
+
+        .footer-col {
+            flex-basis: 270px;
+            padding: 10px;
+
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .ul {
+            list-style-type: none;
+            text-align: start;
+        }
+
+        .ul>li {
+            padding: 7px;
+            font-size: 15px;
+
+        }
+
+        .ul>li:hover {
+            text-decoration: underline;
+            text-decoration-color: black;
+            text-decoration-thickness: 1px;
+        }
+
+        .footer>p {
+            flex-basis: 120px;
+            margin-left: 60px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .footer>p:hover {
+            text-decoration: underline;
+            text-decoration-color: black;
+            text-decoration-thickness: 1px;
+        }
     </style>
 </head>
 
-<body>
-
+<body onclick="removeDropdown()">
 
     <div id="firstbar">
         <div>
@@ -441,7 +901,7 @@
 
 
     <div id="navbar" onmouseenter="removeBar()">
-        <d id="inside-div">
+        <div id="inside-div">
 
 
             <div id="logo">
@@ -522,18 +982,19 @@
 
 
                 <div id="bag">
-                    <a href=""><img id="bag-image"
-                            src="https://cdn-icons-png.flaticon.com/128/687/687259.png"></img></a>
+                    <a href=""><img class="bag-image"
+                            src="https://cdn-icons.flaticon.com/png/128/2956/premium/2956820.png?token=exp=1636251485~hmac=e696802e55bf51a3752c46d0b8f77bfb"></img></a>
                 </div>
             </div>
-    </div>
-    <div class="clear">
-    </div>
+        </div>
+
+
+        <div class="clear"></div>
     </div>
 
     <div id="main-content">
 
-        <div class="black-content">
+        <div class="sale-content">
             <div>
                 <div class="firstDiv">
                     <ul>
@@ -1194,32 +1655,17 @@
                         </li>
                         <li>
                             <h3>
-                                <a href="">Black-Owned & Founded Brands</a>
+                                <a href="">Price Matched</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Bestsellers</a>
+                                <a href="">Men's Designer Sale</a>
                             </h3>
                         </li>
                         <li>
                             <h3>
-                                <a href="">Graphic Tees</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="">Make it pop-it @ Nordstrom</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="">Men's Looks</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <h3>
-                                <a href="">Men's Wedding Guest Attire</a>
+                                <a href="">Women's Designer Sale</a>
                             </h3>
                         </li>
                     </ul>
@@ -1228,53 +1674,44 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Clothing</a>
+                                <a href="">Women</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">Activewear</a>
+                            <a href="">New Markdowns</a>
                         </li>
                         <li>
-                            <a href="">Blazers & Sport Coats</a>
+                            <a href="">Clothing</a>
                         </li>
                         <li>
-                            <a href="">Coats & Jackets</a>
+                            <a href="">Shoes</a>
                         </li>
                         <li>
-                            <a href="">Dress Shirts</a>
+                            <a href="">Handbags & Wallets</a>
                         </li>
                         <li>
-                            <a href="">Jeans</a>
+                            <a href="">Jewelry</a>
                         </li>
                         <li>
-                            <a href="">Joggers & Sweatpants</a>
+                            <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Lounge, Pajamas & Robes</a>
+                            <a href="">Beauty</a>
                         </li>
                         <li>
-                            <a href="">Pants</a>
+                            <a href="">Designer</a>
+                        </li>
+                        <li class="topMargin">
+                            <a href="">Plus</a>
                         </li>
                         <li>
-                            <a href="">Polo Shirts</a>
+                            <a href="">Petite</a>
                         </li>
                         <li>
-                            <a href="">Shirts</a>
+                            <a href="">Maternity</a>
                         </li>
                         <li>
-                            <a href="">Shorts</a>
-                        </li>
-                        <li>
-                            <a href="">Socks</a>
-                        </li>
-                        <li>
-                            <a href="">Suits & Separates</a>
-                        </li>
-                        <li>
-                            <a href="">Sweaters</a>
-                        </li>
-                        <li>
-                            <a href="">Sweatshirts & Hoodies</a>
+                            <a href="">Juniors</a>
                         </li>
                     </ul>
                 </div>
@@ -1282,64 +1719,61 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Shoes</a>
+                                <a href="">Men</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">Boots</a>
+                            <a href="">New Markdowns</a>
                         </li>
                         <li>
-                            <a href="">Comfort</a>
+                            <a href="">Clothing</a>
                         </li>
                         <li>
-                            <a href="">Dress Shirts</a>
+                            <a href="">Shoes</a>
                         </li>
                         <li>
-                            <a href="">Loafers & Slip-One</a>
+                            <a href="">Accessories</a>
                         </li>
                         <li>
-                            <a href="">Oxfords & Derbys</a>
+                            <a href="">Grooming & Cologne</a>
                         </li>
                         <li>
-                            <a href="">Running Shoes</a>
+                            <a href="">Designer</a>
                         </li>
                         <li>
-                            <a href="">Sandals & Flip-Flops</a>
+                            <h3 class="mainh3">
+                                <a href="">Designer</a>
+                            </h3>
                         </li>
                         <li>
-                            <a href="">Shoe Care & Accessories</a>
+                            <a href="">Women</a>
                         </li>
                         <li>
-                            <a href="">Slippers</a>
-                        </li>
-                        <li>
-                            <a href="">Sneakers & Athlitic</a>
+                            <a href="">Men</a>
                         </li>
                     </ul>
                 </div>
-
-
                 <div>
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Accessories</a>
+                                <a href="">Kids</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">Bags & Backpages</a>
+                            <a href="">New Markdowns</a>
                         </li>
                         <li>
-                            <a href="">Belts</a>
+                            <a href="">Girls</a>
                         </li>
                         <li>
-                            <a href="">Face Masks</a>
+                            <a href="">Boys</a>
                         </li>
                         <li>
-                            <a href="">Gloves</a>
+                            <a href="">Baby</a>
                         </li>
                         <li>
-                            <a href="">Hats</a>
+                            <a href="">Baby Gear & Essentials</a>
                         </li>
                         <li>
                             <a href="">Shoes</a>
@@ -1350,48 +1784,29 @@
                     <ul>
                         <li>
                             <h3 class="mainh3">
-                                <a href="">Designer</a>
+                                <a href="">Home</a>
                             </h3>
                         </li>
                         <li>
-                            <a href="">Designer Clothing</a>
+                            <a href="">New Markdowns</a>
                         </li>
                         <li>
-                            <a href="">Designer Shose</a>
+                            <a href="">Bedding & Bath</a>
                         </li>
                         <li>
-                            <a href="">Designer Accessories</a>
+                            <a href="">Home Decor</a>
                         </li>
                         <li>
-                            <h3 class="mainh3">
-                                <a href="">Big & Tall</a>
-                            </h3>
+                            <a href="">Electronics & Tech Accessories</a>
                         </li>
                         <li>
-                            <a href="">Clothing</a>
+                            <a href="">Luggage & Travel</a>
                         </li>
                         <li>
-                            <a href="">Jeans</a>
+                            <a href="">Tabletop & Kitchen</a>
                         </li>
                         <li>
-                            <a href="">Pants</a>
-                        </li>
-                        <li>
-                            <a href="">shirts</a>
-                        </li>
-                        <li>
-                            <h3 class="mainh3">
-                                <a href="">Grooming & Cologne</a>
-                            </h3>
-                        </li>
-                        <li>
-                            <a href="">Body Care & Deodrant</a>
-                        </li>
-                        <li>
-                            <a href="">Cologne</a>
-                        </li>
-                        <li>
-                            <a href="">Dopp Kits & Toiletry Bags</a>
+                            <h3 class="mainh3"><a href="">Beauty</a></h3>
                         </li>
                     </ul>
                 </div>
@@ -1400,12 +1815,12 @@
                         <div>
                             <a href="">
                                 <div>
-                                    <img src="https://n.nordstrommedia.com/id/8908a408-3917-465e-b077-729b84d78ff5.png">
+                                    <img src="https://n.nordstrommedia.com/id/faae0c02-a9a9-427d-b69e-ce5fbd38e500.png">
                                 </div>
                             </a>
                         </div>
                         <div>
-                            <a class="decor" href="">Gifts for Him</a>
+                            <a class="decor" href="">New Markdowns</a>
                             <hr>
                         </div>
                     </div>
@@ -2683,25 +3098,14 @@
     </div>
 
 
-    <div id="container">
-        <h1>SignIn | Create Account</h1>
-        <p>Enter your email to get started.</p>
-        <h5>Email</h5>
-        <input id="email" type="email" placeholder="" />
-        <p>By tapping Next, you agree to our <span>Privacy Policy</span> and <span>Terms & <br />Conditions.</span></p>
-        <button>Next</button>
-    </div>
-
 </body>
-
-</html>
 <script>
     function dropDown(a) {
         var show1 = document.querySelector("#main-content")
         var show = document.querySelector(`.${a}-content`)
         show1.style.display = "block";
         // show.style.display="block";
-        show.style.height = "900px"
+        show.style.height = "500px"
 
         var ele = document.getElementsByClassName("categoryType")
 
@@ -2751,30 +3155,32 @@
         }
     }
 
+    document.getElementById("broadImg").addEventListener("mouseenter", showAnother)
+    document.getElementById("broadImg").addEventListener("mouseleave", showThat)
 
-    document.querySelector("button").addEventListener("click", signUp);
-    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
-
-    function signUp(e) {
-        e.preventDefault();
-        var email = document.getElementById("email").value;
-        var UserCredentials = {
-            email: email,
-
-        };
-        // for(var i = 0;i<userArr.length;i++){
-        //     if (userArr[i].email == email )
-        //     {
-        //         console.log("efe");
-        //         window.location.href = "signin.html";
-        //     }else
-        userArr.push(UserCredentials);
-        localStorage.setItem("userData", JSON.stringify(userArr));
-
-        window.location.href = "signup1.html";
-
+    function showAnother() {
+        document.getElementById("broadImg").innerHTML = "<img src = 'https://n.nordstrommedia.com/id/1f5aa17b-91c9-4924-ad70-7c5857b2a063.jpeg?h=400&w=1608' height= 100% width = 100%>"
 
     }
+    function showThat() {
+        var x = document.getElementById("broadImg")
+        x.innerHTML = `  <div id = "intextImg"> 
+            <h1>New VICI: Exclusively Here</h1>
+            <h2>Bold knits, figure-flaunting sweater dresses—the brand's latest styles exude an easy femininity.</h3>
+                <h2><u>VICI</u></h2>
+        </div>`;
+    }
 
+    document.getElementById("wishes").addEventListener("mouseenter", changeWish)
+    function changeWish() {
+        document.getElementById("wishes").style.backgroundImage = `url("https://n.nordstrommedia.com/id/182e11e3-2b67-4e28-8170-e01e1b7358be.png?h=200&w=1608")`
+
+    }
+    document.getElementById("wishes").addEventListener("mouseleave", revWish)
+    function revWish() {
+
+        document.getElementById("wishes").style.backgroundImage = `url("https://n.nordstrommedia.com/id/04db1e88-e25c-4762-90e8-2192df10333d.png?h=200&w=1608")`
+
+    }
 
 </script>
