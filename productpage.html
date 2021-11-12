@@ -5,22 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="productpage.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="productbox">
-        <div id="leftBox"></div>
+
+        <div id="leftBox">
+            <h1 style="color: red;">Filters</h1>
+            <div id="product-grid-filter">
+    
+                <div id="product-grid-brand">
+                    <hr>
+        
+                    <div class="product-grid-filter-div">
+        
+                        <p>Brand</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-brand-icon" onclick="toggleDisplay('product-grid-brand-content', 'product-grid-brand-icon')"> + </span>
+                    </div>
+        
+                    <!-- <span class="material-icons" id = "search-icon">search<input id = "search-brand" placeholder = "Find a brand"/></span> -->
+        
+                    <div id="product-grid-brand-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Deny Designs" name="brand" onclick="Nike()"><p for="Deny Designs">Nike</p></div>
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Chopvalue" name="brand" onclick="Zella()"><p for="Chopvalue" >Zella</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Adidas()"><p for="Oliver Gal">Adidas</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="SweatyBetty()"><p for="Oliver Gal">Sweaty Betty</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Natori()"><p for="Oliver Gal">Natori</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="FreePeople()"><p for="Oliver Gal">Free People</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Marimekko" onclick="vuori()"><p for="Marimekko">vuori</p></div></div>
+        
+                    <hr>
+                </div>
+
+                <!-- ------- -->
+
+                
+
+                <!-- ----- -->
+                
+        
+        
+        
+                <div id="product-grid-color">
+                    <div class="product-grid-filter-div">
+                        <p>Color</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-color-icon" onclick="toggleDisplay('product-grid-color-content', 'product-grid-color-icon')"> + </span>
+                    </div>
+        
+        
+        
+                    <div id="product-grid-color-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Green" onclick="Black()"><p for="Green" >Black</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Pink"><p for="Pink">Pink</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Grey"><p for="Grey">Grey</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Brown"><p for="Brown">Brown</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Gold"><p for="Gold">Gold</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Black"><p for="Black">Black</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Red"><p for="Red">Red</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Blue"><p for="Blue">Blue</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Yellow"><p for="Yellow">Yellow</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Orange"><p for="Orange">Orange</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Teal"><p for="Teal">Teal</p></div></div>
+                    <hr>
+                </div>
+        
+                <div id="product-grid-type">
+                    <div class="product-grid-filter-div">
+                        <p>Product Type</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-type-icon" onclick="toggleDisplay('product-grid-type-content', 'product-grid-type-icon')"> + </span>
+                    </div>
+        
+        
+                    <div id="product-grid-type-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Decorative Accents"><p for="Decorative Accents">Hoodie</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Framed Art"><p for="Framed Art">Pants</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Wall Hanging"><p for="Wall Hanging">T-Shirt</p></div></div>
+        
+                    <hr>
+                </div>
+        
+            </div>
+        </div>
         <div id="RightMainBox">
-        <h1>Men's Designer Clothing</h1>
+            <h1>Men's Designer Clothing</h1>
+            <div id="filter">
+                <div style=" width: 20%; height: 100%;"></div>
+                <div style="width: 20%; height: 100%;">
+                    <select id="sortByFeatured" onchange="handleSort()">
+                        <option value="low">Sort by: low to high</option>
+                        <option value="high">Sort by:high to low</option>
+                        <option value="sortByRating">Sort by Rating</option>
+                        <option value="sortByAlphabetical">Sort by Alphabetical</option>
+                    </select>
+                </div>
+            </div>
         <div id="rightBox">
         
 
         </div>
     </div>
     </div>
-
-    <div class="footer">
+    <!-- footer -->
+     <div class="footer">
         <div class="footer-col">
             
             <ul class="ul">
@@ -95,11 +179,14 @@
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAZlBMVEUAAAD///9kZGQNDQ1/f3+0tLTMzMwuLi6cnJxXV1f4+Pj09PRsbGzu7u6hoaFzc3OQkJC6urri4uLo6OjY2NgTExOrq6syMjJ8fHzT09MiIiI9PT0cHByHh4dERESvr6/GxsZaWlqkdN/3AAAIuUlEQVR4nOWd6ZqqMAyGix4HQUVRcN/m/m/ygDqudP/S8OD3f6a8UtI0TRMRUSsdFfkym02TXbzdl33RL/fbeJdMZ9kyL0Yp+fiC8H9P5oNDbyfU2vUOg/mE8CmoCIvT+NjXwD3UP45PBdGTUBAWWWIO94SZZBSUaMJJvnaAe2ido2cslHCxTLzwrkqWC+RD4QhHJwTeDfI0gj0XinAzhuFdNd6AngxCOBmuwHy1VkPIJwkgnPvZFpXW8xYQbnBfX5MS78nqSfijc1n8tfthJPyhfX9/SrwYPQiLMHwXRg9nx5lwNA3GV2vqvEA6EqbDoHy1ho4bLTfCcxwcUIj4HIwwDTtBH5q6vEYHwpyJr1YegHDSYwQUomftydkSnktWQCFK26/RkvAfM1+tf4SEcw4T+qnYyh+3IeQ0Ma+yMTgWhDNurifNCAjTcF6oiRLjpdGUcLHlZnrT1jRcZUi44V4kPlUa7o3NCNtjY55lZm+MCDPCx+zvt7FE2nmToQiJdkrb31m+KSZyk3HQ/oshhpBklegtF9o9rYEDZbBq6AkJHLVjbmTrTUbWu3BaQjzg2jToYjS0FlFHCJ+iU/NjF7MfVzdRNYRoI7OzCZoZTh+NuVETopcJC3fSnFCzaCgJwQu9qRdiS6he+lWEGyzgyvbg09zIqX46BeEC64serQNl5oSl4seTE6bY3cTRls9qodrKfz45IXY/uHKIytssxYk9IXghdEk+sHI2pGZaRgg2ow6RXFt3SjaEhHCOBVy7ANo6jJIInIQQGzbcOgHaEsY2hGB322mO2j9FsxPeSHjGAsrtHJZQNAb8mwgn4LCTazqFNWHZdGzTRAg+XXJY6x0JRc+MEB1Yc/wKnaxBw1ifhCkY0D3bw8XefXpvn+Ojj7Dt9oS+hFM94RkMKNxTYZzWrA97+k6Yoo8IHVd7Z8L4fZ6+E8Kjv5Yntt6EH2GbN8IRmM/DkprEvBv1tk97I8RnypidSM/zbDb9TV706/jBvBmbV8ICSycaPosGFeAM6lfb9kqIP+f91b8+eILOqx/8QviDHsvA0FCcvb7ko74QEhzVL3VvED/k20t8JiR4hc0bmifRZFE/v0RBPJpm50R0fL5rJgSHuK/SLBa/FGOKlx/2iZAkYUYdRZxQDFnr6Ut8EJJ88+8OxptIps1Fj7nzIKS5+aJe8E8kY9Z6xC/vhDQTpq8EdPU8TXQP2dwJaVJKNISECeP3LcadkOL2mZYQfaXvSat3QqJvXkNImTP+t2D8ERL9moyE41dC/M73KkbCv4XqRkhltjkJTy+EVAnAnITJM+GCahROwpvHeCVcUg3CSrh8IiTLUmclTB6EZC4+L+HVc7sQDsjG4CXM74R0F+p5Cdd3QroxeAnFHyE+DnwXM2FxIyS8bMBMmN0ICW80MRMmN0KXkkeGYibsXwkJP0NuwvpDFJThIH7C04WQMJSgS8SgCgjfNb4QHv3/0W8+kEhNeJb9WaUcYQCPNeEEYGg8DuvlQnha/UlFiIh1t5ZQzCtChNvdXsJBRYiIO7eX8FARIix2ewl7FSHiXLS9hLtIQFIR20tY8UFiwSSEmGObkYB4pS0mLAQkV6DFszQXkFBpi9/hUkA2+C0mzATkBleLCWcC8n9aTDgVkCBNiwkTAUn1ajHhTkAy11tMGAvIbd8WE27FHvFvWky4F5AU3RYTlgISDm4xISjc3WJCEGOLCftf8B1235Z2fz3svk/Tfb8UsrfobX4kUkMUsj+rtMEcTCWY/aFcakLy07V6f0hbd5X7hLTe41NWfWwDYYaJtUnFT7jExEul4ifMMTFvqfgJC8y5hVT8hCPM2ZNU/IQp5vxQKnbCHegMWCp2wh7oHF8qdsIDKBdDKnbCASifRip2wjkoJ0oqbsJLThQir00+AjPhkTw3kZtw/CX5pd3PEe5+nvcX5Op3/75F9+/MdP/e0xfcXev+/cPu3yHt/j3gL7jL3f37+N2vqfAFdTG6X9uk+/VpvqDGEE+dKELCjzpRPLW+CAk/a32x1GsjJPys10azwWAjbKi5RxP7ZiNsqptI4tdwETbWviRZMLgIm+uXUpyVMhFKatBS1BFmIpTVESb4EnkIpbWgCV4iD6G8njf+JbIQKmqy42PDLISquvrworAchMreCPCdMAehur8FeovBQKjpUYLuMxOeUNtnJjpDxwtPqO0VBDY2wQkN+j1he3YFJzTp2QXtyBCa0KjvGnTcwISGvfOQ/Q/DEhr3P4zOsDHDEhr3sAT2IQ1KaNGHFNdLNiShVS9ZWOAtJKFdP2DUkhGQ0LKnM6ovdzhC677coP1+MEKH3upRirghHIpwK+/Yo7gCuQAs/IEIS0VbKdUlT0AQPBChqveZ8hqrv0ENQ6jsBKq+qOudeRqEMFOOobmK7Bu2CUH4HpixI/RdFgMQ6npGa7tm+znh9ITaYgf6vuBeiOSE+moOBp3PfSYqNaFBW3OT3u4e5qZU/2ffTCyNkTEm9Fk0VrFCK8+7LOplwoaQqiGqp8xafpsRkvQl9lSpaVNrSRgtILWIgNqqe7jaE0Yp4e0oByUGHc0tCVG7fowMVgkHwhbZGzMbY08YzbGHi66KNY2iPQiBoWIPWZbdsiSMztzLRqnr1u5LGE0C1CNRqNd0+IIl5DU4NibGnTBKiSugSTU1XgQ9CauvkcOoxrZfoA9hlNKk9qs0dHmB7oRRNAo7Vacj/SOBCaOoCOepJoX+cQgIo+gnDGOiqS9JSFgxktbRumjnxedNWO2Nad9jYrjPJSSs/HG66/xrKx+bjLDy5IYUN99WQ2sPrUkQwkob9BXNsff0vAlFWC2QJ9wXmZycl78P4QgrLZYIyGRpGmQyEpSw0iT3szvrHPLxPQlNWKvIEpdgdj/JPFwXqSgIaxWn8dEcs38cnyjoalER1prMB4eezunZ9Q6DOXpmPouS8Kp0VOTLbDZNdvF2X/ZFv9xv410ynWXLvBg5boks9B+Qtn2Iea6olwAAAABJRU5ErkJggg==" alt="facebook" style="width:24px;"/>
                 </div>
             <ul>
-        </div> 
-       
+        </div>
+        
+    
+        
+        
     </div>
     
-    <div class="footers" >
+    <div class="footer" >
         <p>Your Privacy Rights</p>
         <p>Dont Sell My Info</p>
         <p>Terms &amp; Conditions</p>
@@ -107,11 +194,11 @@
         <p>&copy;2021 Nordstrom,Inc</p>
     </div> 
 </body>
-</html> 
+</html>
 
 <script>
-    var data = [
-        {
+    var womenProductData = [
+    {
             prodName: "Moncler",
             prodImage : "https://n.nordstrommedia.com/id/sr3/7348c5b4-0d1f-4c5c-a57d-31d335f20819.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
             prodType:  "Maya Lacquered Down Jacket",
@@ -579,13 +666,46 @@
         },
         
         
-    ]
+
+    ];
+
+    localStorage.setItem("womenProductData", JSON.stringify(womenProductData));
+
+    var womenData = JSON.parse(localStorage.getItem("womenProductData"));
+
     var rightBox = document.querySelector("#rightBox");
 
     productList();
 
+    function handleSort() {
+        var sortByFeatured = document.getElementById("sortByFeatured").value;
+        if (sortByFeatured === "low") {
+            womenData = womenData.sort(function (a, b) {
+                return a.MRP - b.MRP;
+            })
+        }
+        if (sortByFeatured === "high") {
+            womenData = womenData.sort(function (a, b) {
+                return b.MRP - a.MRP;
+            })
+        }
+        if (sortByFeatured === "sortByRating") {
+            womenData = womenData.sort(function (a, b) {
+                return b.Rating - a.Rating
+            })
+        }
+        if (sortByFeatured === "sortByAlphabetical") {
+            womenData = womenData.sort(function (a, b) {
+                return a.prodName > b.prodName ? 1 : b.prodName > a.prodName ? -1 : 0
+            })
+        }
+        console.log("here");
+        productList(womenData)
+    }
+
     function productList() {
-     data.map(function (item) {
+        document.querySelector("#rightBox").innerHTML = "";
+     womenData.map(function (item) {
         var imgDiv = document.createElement("div");
         imgDiv.setAttribute("class", "imgDivClass");
         var img = document.createElement("img");
@@ -599,7 +719,7 @@
         p2.textContent = item.prodType;
         var p3 = document.createElement("p");
         p3.setAttribute("class","p3Class");
-        p3.textContent = item.MRP;
+        p3.textContent = `INR ${item.MRP}`;
         var p4 = document.createElement("p");
         p4.setAttribute("class","p4Class");
         p4.textContent = item.Star;
@@ -610,5 +730,99 @@
         rightBox.append(imgDiv);
      })
     }
-    var rightBoxChild = document.createElement("")
+    // var rightBoxChild = document.createElement("")
+
+    // next
+
+    
+    function toggleDisplay(divID, id) {
+        var div = document.getElementById(divID);
+        var icon_id = document.getElementById(id);
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            icon_id.innerText = ' - ';
+        } else {
+            div.style.display = "none";
+            icon_id.innerText = ' + ';
+        }
+    }
+
+    var tick = 0;
+
+    function Monclear() {
+        
+        console.log("here");
+        
+        womenData = womenData.filter(function (elem) {
+            // arr.push(elem.prodName == "Natori");
+            return elem.prodName == "Monclear";
+        })
+        productList(womenData);
+        
+        
+    
+    }
+    function Burberry() {
+        // var arr = womenData;
+        console.log("here");
+        womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Burberry";
+        })
+        
+        // window.location.reload(true);
+    
+        productList(womenData);
+
+        
+    }
+    function Givenchy() {
+        // var arr = womenData;
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Givenchy";
+        })
+        productList(womenData);
+    }
+    function MonclearGrenoble() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Monclear Grenoble";
+        })
+        productList(womenData);
+    }
+   
+
+    // ------
+    function createBrandFilters() {
+        var brands_div = document.getElementById('product-grid-brand-content');
+        brands_div.innerHTML = "";
+
+        var brands = {};
+
+        currentArray.forEach(function (product) {
+            if (brands[product.brand] === undefined) {
+                brands[product.brand] = 1;
+                var div = document.createElement('div');
+                div.setAttribute('class', 'product-grid-checkbox-div');
+
+                var checkbox = document.createElement('input');
+                checkbox.setAttribute('class', `product-grid-brand product-grid-checkmark`);
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.value = `${product.brand}`;
+                checkbox.onchange = addBrandFilter;
+
+                var label = document.createElement('p');
+                label.setAttribute('for', `${product.brand}`);
+                label.innerText = `${product.brand}`;
+
+                div.append(checkbox, label);
+                brands_div.appendChild(div);
+            }
+        })
+    }
+
+    
+   
+
 </script>
