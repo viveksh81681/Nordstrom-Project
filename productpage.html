@@ -92,6 +92,10 @@
             <div id="filter">
                 <div style=" width: 20%; height: 100%;">16 items</div>
                 <div style="width: 20%; height: 100%;">
+                    <div class="checkoutCart">
+                    <button id="cart">Shopping Bag</button>
+                    <button id="checkout">Checkout</button>
+                </div>
                     <select id="sortByFeatured" onchange="handleSort()">
                         <option value="low">Sort by: low to high</option>
                         <option value="high">Sort by:high to low</option>
@@ -909,6 +913,8 @@
 
     var womenData = JSON.parse(localStorage.getItem("womenProductData"));
 
+    var cartArr = JSON.parse(localStorage.getItem("cartArrItems")) || [];
+
     var rightBox = document.querySelector("#rightBox");
 
     productList();
@@ -962,7 +968,15 @@
         var p5 = document.createElement("p");
         p5.setAttribute("class","p5Class");
         p5.textContent = item.Deliver;
-        imgDiv.append(img, p1, p2, p3, p4, p5);
+        var btn = document.createElement("button");
+        btn.setAttribute("class","addToCartBtn");
+        btn.textContent = "Add to Cart";
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        btn.addEventListener("click", function() {
+        addToCart(item);
+    });
+        imgDiv.append(img, p1, p2, p3, p4, p5,btn);
         rightBox.append(imgDiv);
      })
     }
@@ -995,7 +1009,7 @@
         })
         productList(womenData);
         
-        
+        // window.location.reload(true);
     
     }
     function Zella() {
@@ -1052,8 +1066,7 @@
         productList(womenData);
     }
     
-   
-
+    
 
     // ------
     function createBrandFilters() {
@@ -1085,6 +1098,31 @@
     }
 
     
-   
+    function addToCart(item){
+            var itemsPresent = false;
+            for(var i = 0; i < cartArr.length; i++){
+                if(item.prodImage == cartArr[i].prodImage){
+                    itemsPresent = true;
+                    break;
+                }
+            }
+            if(itemsPresent == true){
+                alert(`Item already added`);
+            }
+            else {
+            alert(`Added`);
+            cartArr.push(item);
+            localStorage.setItem("cartArrItems",JSON.stringify(cartArr));
+            }
+        }
+    
 
+    document.getElementById("cart").addEventListener("click", function () {
+        window.location.href = "cart.html";
+    })
+    document.getElementById("checkout").addEventListener("click", function () {
+        window.location.href = "checkout.html";
+    })
+
+    
 </script>
