@@ -923,3 +923,22 @@ px
 ; */
     font-size: 12px;
 }
+#cart{
+    background-color: grey;
+    color: white;
+    width: 50%;
+    border: 0;
+    padding: 15px;
+    margin-right: 10px;
+}
+#checkout{
+    background-color: black;
+    color: white;
+    width: 50%;
+    border: 0;
+    padding: 15px;
+}
+.checkoutCart{
+    display: flex;
+
+}
