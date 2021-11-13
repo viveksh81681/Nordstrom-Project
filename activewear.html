@@ -1,488 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-    <title>Nordstorm</title>
-    <style>
-        #container{
-           height:500px;
-           width:500px;
-          margin-left: 30%;
-           margin-top: 200px;
-           
-           }
-        
-           #container>p{
-               color: #8e8e8e;
-
-           }
-
-          button{
-          width:80%;
-           height: 35px;
-          font:25px;
-          background-color:black;
-          color: white;
-          margin-top: 10px;
-        }
-      
-        input{
-         width: 75%;
-         padding: 10px;
-       
-   
-         
-        }
-        p>span{
-        text-decoration: underline;
-    }
-    #firstbar {
-            background-color: black;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 0.15px;
-        }
-
-        #firstbar a {
-            cursor: pointer;
-            color: rgb(248, 246, 246);
-        }
-
-        #firstbar p {
-            float: left;
-            margin-left: 700px;
-
-        }
-
-        #firstbar button {
-            float: right;
-            color: white;
-            background-color: black;
-            border: none;
-            cursor: pointer;
-            font-size: 13px;
-            margin-top: 10px;
-        }
-
-        #firstbar div button img {
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            margin-right: 5px;
-            margin-top: 5px;
-        }
-
-        #firstbar div button span {
-            /* vertical-align: top; */
-            margin-top: 15px;
-        }
-
-        .clear {
-            clear: both
-        }
-
-        #navbar {
-            margin-top: 25px;
-            padding-bottom: 13px;
-
-        }
-
-        #nav {
-            width: 96.5%;
-            margin: auto;
-        }
-
-        #inside-div {
-            display: flex;
-
-        }
-
-        #logo {
-            margin-top: 10px;
-            width: 17%;
-            font-size: 13px;
-        }
-
-        #category {
-            width: 65%;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #category>button {
-            display: inline;
-            border: none;
-            background-color: white;
-            margin-right: 20px;
-            color: #393939;
-            font-family: Brandon Text, Arial, sans-serif;
-            font-weight: 400;
-            font-size: 18px;
-            transition-duration: 1s;
-        }
-
-        #red {
-            color: #d61f27 !important;
-        }
-
-        #search {
-            display: flex;
-            width: 20%;
-            margin-right: 0px !important;
-            margin-left: 10px;
-        }
-
-        #search>div {
-
-            margin-right: 20px;
-        }
-
-        #search>div:nth-last-child(1) {
-            margin-right: 0px;
-        }
-
-        #bag {
-            width: 15% !important;
-            height: 50px !important;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="activewear.css"> 
 
 
-        }
 
-        #bag img {
-            width: 100%;
-            margin-top: 3px;
-        }
-
-        #bag-image {
-            width: 100%;
-            height: 40px;
-        }
-
-        #one,
-        #two {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 14px;
-            color: #393939;
-            font-family: Brandon Text, Arial, sans-serif;
-        }
-
-        #one img {
-            width: 100%;
-            height: 30px;
-        }
-
-        #bag>a>img {
-            width: 100%;
-            height: 25px;
-        }
-
-        #two>img {
-            width: 16px;
-            height: 16px;
-        }
-
-        .img>img {
-            width: 20px;
-            height: 20px;
-        }
-
-        #category>button:nth-last-child(1) {
-            margin-left: 17px;
-            margin-right: 0px;
-        }
-
-        #search p {
-            margin-left: 3px;
-        }
-
-        .black-content,
-        .sale-content,
-        .Women-content,
-        .Men-content,
-        .Kids-content,
-        .YoungAdult-content,
-        .Activewear-content,
-        .Home-content,
-        .Beauty-content,
-        .Designer-content {
-            display: block;
-            height: 0px;
-            width: 97%;
-            position: absolute;
-            overflow: hidden;
-            background-color: #ffffff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 0px 25px;
-            padding-bottom: 0px;
-            z-index: 1;
-            transition: height 0.5s ease-out;
-            overflow-y: auto;
-
-        }
-
-        #inputBox {
-            display: block;
-            margin-top: 35px;
-            position: absolute;
-            top: 90px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 6;
-            border: none;
-            padding: 0px 20px;
-            width: 400px;
-            text-align: left;
-        }
-
-        #signIN {
-            display: none;
-            position: absolute;
-            top: 100px;
-            right: 20px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            border: none;
-            z-index: 7;
-            padding: 10px 10px;
-            background-color: white;
-            width: 16% !important;
-            margin-top: 20px;
-        }
-
-        #signIN li {
-            margin: 10px;
-            margin-bottom: 20px;
-            font-size: 12px;
-        }
-
-        #signIN li:nth-child(1) {
-            width: 65%;
-            background-color: black;
-            text-align: center;
-            padding: 5px 20px;
-            margin-right: 15px;
-            text-align: left;
-        }
-
-        #signIN li:nth-child(2) {
-            width: 65%;
-            border: 1px solid black;
-            text-align: center;
-            padding: 5px 20px;
-            margin-right: 15px;
-            text-align: left;
-        }
-
-        #signIN a {
-            text-decoration: none;
-            color: #393939;
-        }
-
-        #signIN li:nth-child(1)>a {
-            color: white;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .mainh3 {
-            margin-top: 25px;
-            /* margin-left: 60px;
-        } */
-            font-size: 70px;
-        }
-
-        .black-content>div,
-        .sale-content>div,
-        .Women-content>div,
-        .Men-content>div,
-        .Kids-content>div,
-        .YoungAdult-content>div,
-        .Activewear-content>div,
-        .Home-content>div,
-        .Beauty-content>div,
-        .Designer-content>div {
-            display: flex;
-        }
-
-        .black-content>div>div,
-        .sale-content>div>div,
-        .Women-content>div>div,
-        .Men-content>div>div,
-        .Kids-content>div>div,
-        .YoungAdult-content>div>div,
-        .Activewear-content>div>div,
-        .Home-content>div>div,
-        .Beauty-content>div>div,
-        .Designer-content>div>div {
-            margin-right: 80px;
-        }
-
-        .black-content ul,
-        .sale-content ul,
-        .Women-content ul,
-        .Men-content ul,
-        .Kids-content ul,
-        .YoungAdult-content ul,
-        .Activewear-content ul,
-        .Home-content ul,
-        .Beauty-content ul,
-        .Designer-content ul {
-            list-style-type: none
-        }
-
-        .black-content a,
-        .sale-content a,
-        .Women-content a,
-        .Men-content a,
-        .Kids-content a,
-        .YoungAdult-content a,
-        .Activewear-content a,
-        .Home-content a,
-        .Beauty-content a,
-        .Designer-content a {
-            color: #393939;
-            font-size: 18px;
-            line-height: 1.4;
-            text-decoration: none;
-        }
-
-
-        .black-content li>a,
-        .sale-content li>a,
-        .Women-content li>a,
-        .Men-content li>a,
-        .Kids-content li>a,
-        .YoungAdult-content li>a,
-        .Activewear-content li>a,
-        .Home-content li>a,
-        .Beauty-content li>a,
-        .Designer-content li>a {
-            font-size: 18px;
-        }
-
-        .black-content li,
-        .sale-content li,
-        .Women-content li,
-        .Men-content li,
-        .Kids-content li,
-        .YoungAdult-content li,
-        .Activewear-content li,
-        .Home-content li,
-        .Beauty-content li,
-        .Designer-content li {
-            margin-bottom: 10px;
-        }
-
-        .firstDiv {
-            margin-right: 30px;
-        }
-
-        hr {
-            background-color: rgb(223, 213, 213);
-            height: 1px;
-            width: 160px;
-            margin-bottom: 10px;
-            border: none;
-        }
-
-        .topMargin {
-            margin-top: 30px;
-        }
-
-        .marginRem {
-            margin-right: 0px;
-            width: 15%;
-        }
-
-        .marginRem img {
-            width: 100%;
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        .decor {
-            font-size: 11px;
-        }
-
-        .decor+hr {
-            width: 110px;
-            background-color: black;
-        }
-
-        ul {
-            list-style-type: none
-        }
-
-        /* fotter********* */
-        *{
-            font-family: Arial,  sans-serif;
-        }
-        .footer {
-            display: flex;
-            background-color:whitesmoke;
-            
-        }
-    
-        .footer-col{
-            flex-basis: 270px;
-            padding:10px;
-    
-        }
-        .heading{
-            font-size: 24px;
-            font-weight: 700;
-        }
-        .ul{
-            list-style-type: none;
-            text-align:start;
-        }
-    
-        .ul > li{
-            padding:7px;
-            font-size: 15px;
-         
-        }
-        .ul> li:hover{
-            text-decoration: underline;
-            text-decoration-color: black;
-            text-decoration-thickness: 1px;
-        }
-    
-        .footer > p{
-            flex-basis: 120px;
-            margin-left: 60px;
-            font-size: 12px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    
-        .footer > p:hover{
-            text-decoration: underline;
-            text-decoration-color: black;
-            text-decoration-thickness: 1px;
-        }
-
-
-    </style>
 </head>
+
 <body>
-    <div onclick="removeDropdown()">
-        <div id="firstbar">
-            <div>
-                <p style="margin-left:400px">
-                    <strong>Shipping outside of the U.S. or Canada?</strong>
-                    <a title="Learn About International Shipping" href="">Learn About International Shipping</a>
-                </p>
-                <!-- <button href=""><img src="https://n.nordstrommedia.com/alias/IN.gif"><span>India</span></button> -->
-            </div>
-            <div class="clear"></div>
+    <div id="firstbar">
+        <div style="display: flex;">
+            <p style="margin-left: 500px;">
+                <strong>Shipping outside of the U.S. or Canada?</strong>
+                <a title="Learn About International Shipping" href="">Learn About International Shipping</a>
+            </p>
+            <button style="margin-left: 250px; font-size: 15px;" href=""><img src="https://n.nordstrommedia.com/alias/IN.gif"><span>India</span></button>
         </div>
-    
+        <div class="clear"></div>
+    </div>
+
     
     
         <div id="navbar" onmouseenter="removeBar()">
@@ -490,7 +30,7 @@
     
     
                 <div id="logo">
-                    <a href="landing_page.html"><img src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"></a>
+                    <a href="home.html"><img src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"></a>
                 </div>
     
     
@@ -527,20 +67,20 @@
                     </div>
     
                     <div id="two" onmouseenter="removeBar()">
-                        <p onmouseenter="signBar()">Sign In</p>
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU"></img>
+                        <p onmouseenter="signBar()">Hi, Malaya</p>
+                        <!-- <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU"></img> -->
                     </div>
     
     
                     <div id="signIN" onmouseleave="removeSignBar()">
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="signin.html">Sign In</a>
                             </li>
                             <li>
-                                <a href="signup1.html">Create Account</a>
-                            </li>
+                                <a href="signup.html">Create Account</a>
+                            </li> -->
                             <li>
                                 <a href=""><span>Your Account</span></a>
                             </li>
@@ -567,7 +107,7 @@
     
     
                     <div id="bag">
-                        <a href=""><img id="bag-image"
+                        <a href="cart.html"><img id="bag-image"
                                 src="https://cdn-icons-png.flaticon.com/128/687/687259.png"></img></a>
                     </div>
                 </div>
@@ -1014,7 +554,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Activewear</a>
+                                <a href="activewear.html">Activewear</a>
                             </li>
                             <li>
                                 <a href="">Blazers</a>
@@ -1277,7 +817,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Activewear</a>
+                                <a href="mens.html">Activewear</a>
                             </li>
                             <li>
                                 <a href="">Blazers & Sport Coats</a>
@@ -1331,7 +871,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Boots</a>
+                                <a href="boot.html">Boots</a>
                             </li>
                             <li>
                                 <a href="">Comfort</a>
@@ -1399,10 +939,10 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Designer Clothing</a>
+                                <a href="mens.html">Designer Clothing</a>
                             </li>
                             <li>
-                                <a href="">Designer Shose</a>
+                                <a href="boot.html">Designer Shose</a>
                             </li>
                             <li>
                                 <a href="">Designer Accessories</a>
@@ -2168,7 +1708,7 @@
                                 <a href="">Accent Furniture</a>
                             </li>
                             <li>
-                                <a href="product_grid.html">Art, Wall Decor & Mirrors</a>
+                                <a href="">Art, Wall Decor & Mirrors</a>
                             </li>
                             <li>
                                 <a href="">Books, Games & Puzzles</a>
@@ -2275,7 +1815,7 @@
                             </li>
                             <li>
                                 <h3 class="mainh3">
-                                    <a href="">Luggage & Travel</a>
+                                    <a href="bag.html">Luggage & Travel</a>
                                 </h3>
                             </li>
                             <li>
@@ -2726,16 +2266,113 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <div id = "container">
-    <h1>SignIn | Create Account</h1>
-    <p>Enter your email to get started.</p>
-    <h5>Email</h5>
-    <input id = "email" type="email" placeholder=""/>
-    <p>By tapping Next, you agree to our <span>Privacy Policy</span> and <span>Terms & <br/>Conditions.</span></p>
-    <button id = "maccc">Next</button>
+
+
+
+
+
+    <!-- nav complete******************** -->
+    <div id="productbox">
+        <div id="leftBox">
+            <h1 style="color: red;">Filters</h1>
+            <div id="product-grid-filter">
+    
+                <div id="product-grid-brand">
+                    <hr>
+        
+                    <div class="product-grid-filter-div">
+        
+                        <p>Brand</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-brand-icon" onclick="toggleDisplay('product-grid-brand-content', 'product-grid-brand-icon')"> + </span>
+                    </div>
+        
+                    <!-- <span class="material-icons" id = "search-icon">search<input id = "search-brand" placeholder = "Find a brand"/></span> -->
+        
+                    <div id="product-grid-brand-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Deny Designs" name="brand" onclick="Nike()"><p for="Deny Designs">Nike</p></div>
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Chopvalue" name="brand" onclick="Zella()"><p for="Chopvalue" >Zella</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Adidas()"><p for="Oliver Gal">Adidas</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="SweatyBetty()"><p for="Oliver Gal">Sweaty Betty</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Natori()"><p for="Oliver Gal">Natori</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="FreePeople()"><p for="Oliver Gal">Free People</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Marimekko" onclick="vuori()"><p for="Marimekko">vuori</p></div></div>
+        
+                    <hr>
+                </div>
+
+                <!-- ------- -->
+
+                
+
+                <!-- ----- -->
+                
+        
+        
+        
+                <div id="product-grid-color">
+                    <div class="product-grid-filter-div">
+                        <p>Color</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-color-icon" onclick="toggleDisplay('product-grid-color-content', 'product-grid-color-icon')"> + </span>
+                    </div>
+        
+        
+        
+                    <div id="product-grid-color-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Green" onclick="Black()"><p for="Green" >Black</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Pink"><p for="Pink">Pink</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Grey"><p for="Grey">Grey</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Brown"><p for="Brown">Brown</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Gold"><p for="Gold">Gold</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Black"><p for="Black">Black</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Red"><p for="Red">Red</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Blue"><p for="Blue">Blue</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Yellow"><p for="Yellow">Yellow</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Orange"><p for="Orange">Orange</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Teal"><p for="Teal">Teal</p></div></div>
+                    <hr>
+                </div>
+        
+                <div id="product-grid-type">
+                    <div class="product-grid-filter-div">
+                        <p>Product Type</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-type-icon" onclick="toggleDisplay('product-grid-type-content', 'product-grid-type-icon')"> + </span>
+                    </div>
+        
+        
+                    <div id="product-grid-type-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Decorative Accents"><p for="Decorative Accents">Hoodie</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Framed Art"><p for="Framed Art">Pants</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Wall Hanging"><p for="Wall Hanging">T-Shirt</p></div></div>
+        
+                    <hr>
+                </div>
+        
+            </div>
+        </div>
+        <div id="RightMainBox">
+            <h1>Women's Athletic Clothing</h1>
+            <div id="filter">
+                <div style=" width: 20%; height: 100%;">16 items</div>
+                <div style="width: 20%; height: 100%;">
+                    <div class="checkoutCart">
+                    <button id="cart">Shopping Bag</button>
+                    <button id="checkout">Checkout</button>
+                </div>
+                    <select id="sortByFeatured" onchange="handleSort()">
+                        <option value="low">Sort by: low to high</option>
+                        <option value="high">Sort by:high to low</option>
+                        <option value="sortByRating">Sort by Rating</option>
+                        <option value="sortByAlphabetical">Sort by Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+        <div id="rightBox">
+        
+
+        </div>
     </div>
-    <div class="footer">
+    </div>
+    <!-- footer -->
+     <div class="footer">
         <div class="footer-col">
             
             <ul class="ul">
@@ -2824,41 +2461,932 @@
         <p>Intrest Based Ads</p>
         <p>&copy;2021 Nordstrom,Inc</p>
     </div> 
-    
 </body>
 </html>
+
 <script>
-     document.querySelector("#maccc").addEventListener("click" , signUp);
-    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+    var womenProductData = [
+        {
+            prodName: "Natori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/a6da2c33-02f1-43ec-9052-be9ced021cbf.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Bliss Perfection Bralette",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 4041.60,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Wheat",
+            
+        },
+        {
+            prodName: "The North Face",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/6d3e5981-bed8-4700-96c4-a67a4002f46c.jpeg?h=365&w=240&dpr=2",
+            prodType: "Arctic Waterproof 550-Fill-Power Down Parka with Faux Fur Trim",
+            MRP : 2299.00,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "vuori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/13278ddb-b704-49fc-86ef-4964297d1333.jpeg?h=365&w=240&dpr=2",
+            prodType: "Free People Ciara Long Sleeve Layering Top",
+            MRP : 4000.00,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Wheat",
+            
+        },
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/cc0bcdb9-1a13-4075-86cf-d30fa38cdd1f.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sportswear Essential Fleece Pants",
+            MRP : 2360.00,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Free People FP Movement ",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1e68b3c8-96ed-4e4a-95c2-ca1299562e55.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sunny Skinny Sweatpants",
+            MRP : 2600.97,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Silver",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ccbe2f19-7131-4b17-b803-9b01912a1040.jpeg?h=365&w=240&dpr=2",
+            prodType: "Post Studio Dress",
+            MRP : 1980.97,
+            Star : "★★",
+            Rating : 2,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5fa42b94-302f-4f4e-9940-2142d4d4f967.jpeg?h=365&w=240&dpr=2",
+            prodType: "Amazing Crewneck Sweatshirt",
+            MRP : 6944.00,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        {
+            prodName: "Natori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/896f2309-0150-4fca-b4fe-163347f2aba2.jpeg?h=365&w=240&dpr=2",
+            prodType: "Relaxed Long Sleeve T-Shirt",
+            MRP : 1145.00,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c75b5601-7cae-422b-a46f-078b4bf9c6c2.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Moto Ribbed High Waist Ankle Leggings",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 2090.90,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d7ddc0c2-9394-4742-bbdb-2f1febbd2608.jpeg?h=365&w=240&dpr=2",
+            prodType: "Live In High Waist Leggings",
+            MRP : 5900.00,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Yellow",
+            
+        },
+        {
+            prodName: "Free People",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/64fb72f2-3aaf-4c71-b5e3-5182996f1112.jpeg?h=365&w=240&dpr=2",
+            prodType: "Free People Ciara Long Sleeve Layering Top",
+            MRP : 4000.00,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Free People",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ee29c0a1-326e-47f1-ba35-40bc0bfad621.jpeg?h=365&w=240&dpr=2",
+            prodType: "Live In Pocket Joggers",
+            MRP : 1590.00,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "vuori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/b81b2034-250a-4877-9c25-77bd50b6a5be.jpeg?h=365&w=240&dpr=2",
+            prodType: "Pocket Performance Joggers",
+            MRP : 2284.90,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/9c1bfdc2-3c89-45b2-97ef-2d05fe661d5d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Restore Soft Pocket Leggings",
+            MRP : 4008.75,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/299dd0ac-a208-444d-a099-95b8d7044963.jpeg?h=365&w=240&dpr=2",
+            prodType: "Women's Seamless Wick It Long Sleeve Top",
+            MRP : 2955.90,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Purple",
+            
+        },
+        {
+            prodName: "Natori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/be8098a5-7c9a-4b29-9f66-901fec474865.jpeg?h=365&w=240&dpr=2",
+            prodType: "Dynamic Contour Underwire Sports Bra",
+            MRP : 2980.90,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        // -------------
+
+        {
+            prodName: "Nordstrom",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5ca6e976-34e4-45bb-8c51-629173e500bb.jpeg?h=365&w=240&dpr=2",
+            prodType: "Assorted 3-Pack Pillow Sole Crew Socks (Buy More & Save)",
+            MRP : 802.90,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "SPANX®",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/fd7e0bb5-f8de-408d-8a6e-03e6bc5b5e95.jpeg?h=365&w=240&dpr=2",
+            prodType: "Booty Boost Active 7/8 Leggings",
+            MRP : 7860.57,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Navy",
+            
+        },
+        {
+            prodName: "Polo Ralph Lauren",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c2565ae2-6c2e-4178-9824-f4804777187b.jpeg?h=365&w=240&dpr=2",
+            prodType: "Polo Ralph Lauren Sequin Short Sleeve Polo",
+            MRP : 21496.25,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/64b5c84c-05f6-461c-8849-c1e8bc2f3c25.jpeg?h=365&w=240&dpr=2",
+            prodType: "Studio Lite Ribbed Detail Track Jacket",
+            MRP : 7138.68,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "The North Face",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/dad40290-2a75-4a6b-8cab-e13c7e517d48.jpeg?h=365&w=240&dpr=2",
+            prodType: "TKA Glacier Pullover Hoodie",
+            MRP : 6336.58,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1695d824-8b03-4525-a3b1-06e07c7e21cc.jpeg?h=365&w=240&dpr=2",
+            prodType: "Tempo Dri-FIT Running Shorts",
+            MRP : 1841.62,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        {
+            prodName: "Caslon®",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/cbed034c-226e-47ce-b08a-0f97199f018d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Thermal Knit Top",
+            MRP : 3128.19,
+            Star : "★",
+            Rating : 1,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/66e90e14-ec90-4afd-a587-cc471f7694bb.jpeg?h=365&w=240&dpr=2",
+            prodType: "One Faux Leather Mid Rise 7/8 Leggings",
+            MRP : 3368.82,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Gray",
+            
+        },
+        {
+            prodName: "UGG®",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ec3e17ee-277b-4be2-91e3-afe7d1e02e35.jpeg?h=365&w=240&dpr=2",
+            prodType: "Classic Boot Socks",
+            MRP : 1925.04,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Gray",
+            
+        },
+        
+        {
+            prodName: "Zella",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/65f031ff-7063-4ac1-8f63-c0a294769c57.jpeg?h=365&w=240&dpr=2",
+            prodType: "Ava T-Shirt",
+            MRP : 1925.04,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/06fe8624-ab5e-4143-b066-978075866508.jpeg?h=365&w=240&dpr=2",
+            prodType: "Run In Long Sleeve T-Shirt",
+            MRP : 4732.38,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Teal",
+            
+        },
+        
+        {
+            prodName: "vuori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ac8c3e31-6d16-4e77-9203-145fede8bab5.jpeg?h=365&w=240&dpr=2",
+            prodType: "Daily Leggings",
+            MRP : 6737.63,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Teal",
+            
+        },
+        
+        {
+            prodName: "BP.",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c6fe4581-e4c6-4552-92fa-c4fb4184a656.jpeg?h=365&w=240&dpr=2",
+            prodType: "High Waist Bike Shorts",
+            MRP : 802.10,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/848660ff-f547-4314-af9b-a3b0a04b05ab.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sportswear Quarter Zip Pullover",
+            MRP : 5213.64,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Happy Socks",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/159cef80-cf30-4be5-8e5a-be4f1015c3a7.jpeg?h=365&w=240&dpr=2",
+            prodType: "Leopard Spot Socks",
+            MRP : 962.52,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/12dfec75-5d68-423f-9e57-5534aa7f77a0.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sportswear Collection Essentials Oversize Hoodie",
+            MRP : 5213.64,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Sweaty Betty",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/e5d6705a-22f3-4626-92d2-7413c63a9e2d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sportswear Collection Essentials Oversize Hoodie",
+            MRP : 6256.37,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        
+        {
+            prodName: "Alo",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d56835b3-091e-471c-a21c-62cb0c72bc8b.jpeg?h=365&w=240&dpr=2",
+            prodType: "Alosoft High Waist 7/8 Leggings",
+            MRP : 7860.57,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        
+        {
+            prodName: "Sweaty Betty",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/2d58effe-641d-4587-b2f5-72788bee97f1.jpeg?h=365&w=240&dpr=2",
+            prodType: "Nantucket Fleece Half Zip Pullover",
+            MRP : 7860.57,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/758c5ef8-5abd-43cc-be81-7ea4c1a12933.jpeg?h=365&w=240&dpr=2",
+            prodType: "Stripe Sweatpants",
+            MRP : 12512.74,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Blue",
+            
+        },
+        
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/df7393fb-18e6-44f3-b4be-8653ed35d587.jpeg?h=365&w=240&dpr=2",
+            prodType: "Cara Hoodie (Plus Size)",
+            MRP : 2398.28,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Adidas",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ce27a356-e083-4c5a-99b5-8fa2f2388c59.jpeg?h=365&w=240&dpr=2",
+            prodType: "Slim Joggers",
+            MRP : 4812.59,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Adidas",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/27181a7d-f37d-4ace-8ba4-cd1eda53c41d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sweatpants",
+            MRP : 4010.50,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        
+        {
+            prodName: "vuori",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c23e2e40-f090-48b8-973a-6c28a7c248b6.jpeg?h=365&w=240&dpr=2",
+            prodType: "Crescent Performance Half-Zip Crop Pullover",
+            MRP : 5454.27,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Silver",
+            
+        },
+        
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d638f32f-5e63-4c41-8478-06bbc241e485.jpeg?h=365&w=240&dpr=2",
+            prodType: "6-Pack Everyday Lightweight No-Show Training Socks",
+            MRP : 1604.20,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Silver",
+            
+        },
+        {
+            prodName: "Sweaty Betty",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/dfe3586f-565d-4827-aaac-7b9ab2233062.jpeg?h=365&w=240&dpr=2",
+            prodType: "B.Active Sports Bra",
+            MRP :  1684.41,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Grey",
+            
+        },
+        
+        {
+            prodName: "Hue",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/b545a86b-56b6-432e-a81b-787a71133b7b.jpeg?h=365&w=240&dpr=2",
+            prodType: "No-Show Socks",
+            MRP :  521.36,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/d431b993-d181-4459-a599-18cc5be4138c.jpeg?h=365&w=240&dpr=2",
+            prodType: "NFoil Active Leggings",
+            MRP :  5678.86,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Gray",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/a261c786-a4e4-4d9d-8e40-476304a3da4e.jpeg?h=365&w=240&dpr=2",
+            prodType: "Living Easy Thermal Knit Sweatpants",
+            MRP :  7058.47,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Teal",
+            
+        },
+        
+        {
+            prodName: "Zella",
+            prodImage : " https://n.nordstrommedia.com/id/sr3/7f911519-ad10-4525-9420-0e19b10591f5.jpeg?h=365&w=240&dpr=2",
+            prodType: "Embody Oversize T-Shirt",
+            MRP :  3930.29,
+            Star : "★★",
+            Rating : 2,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : "  https://n.nordstrommedia.com/id/sr3/dafb0629-1ec5-42c1-8023-200e98cf03fb.jpeg?h=365&w=240&dpr=2",
+            prodType: "Brushed Up Crop Pullover",
+            MRP :  7058.47,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "Teal",
+            
+        },
+        
+        {
+            prodName: "Sweaty Betty",
+            prodImage : "  https://n.nordstrommedia.com/id/sr3/c1b3388d-08ff-4c42-86fd-04cc9e30cfae.jpeg?h=365&w=240&dpr=2",
+            prodType: "Restful Bouclé Jacket",
+            MRP :  10266.87,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        {
+            prodName: "Sweaty Betty",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/58333e41-917a-4f17-8ed3-33d7180ad1bf.jpeg?h=365&w=240&dpr=2",
+            prodType: "All Day High Waist Embossed Leggings",
+            MRP :  3753.82,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/0ea26d47-d8f6-4e19-88f0-f5dd40bbc0d1.jpeg?h=365&w=240&dpr=2",
+            prodType: "Peaceful High Waist Pocket Slim Joggers",
+            MRP :  5534.48,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/4f76ec2c-847b-43b4-9533-dba5ffa6b158.jpeg?h=365&w=240&dpr=2",
+            prodType: "Oasis Long Sleeve Merino Wool Base Layer Tee",
+            MRP :  7619.94,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/b2de2f57-1352-4df7-8ac2-311e293ac69d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Fuzzy Reindeer Nonskid Socks",
+            MRP :  561.47,
+            Star : "★★",
+            Rating : 2,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Adidas",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/7b843707-65cf-466c-ad50-7f490c830d88.jpeg?h=365&w=240&dpr=2",
+            prodType: "Trefoil Crewneck Sweatshirt",
+            MRP :  4010.50,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Zella",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/430195a1-5573-4b9d-a456-1a740b241861.jpeg?h=365&w=240&dpr=2",
+            prodType: "Spray Dye High Waist Leggings",
+            MRP :  3801.95,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        
+        {
+            prodName: "Nike",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/418744c5-7c59-4e50-99af-2880c61122ba.jpeg?h=365&w=240&dpr=2",
+            prodType: "Element Half Zip Pullover",
+            MRP :   5213.64,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Alo",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/eed2bf9b-6b39-4c42-b80d-266e20ddc497.jpeg?h=365&w=240&dpr=2",
+            prodType: "Accolade Hoodie",
+            MRP :   9464.77,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        {
+            prodName: "Alo",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/8a71ae36-c1a3-4505-a6e6-5daa7167b8a3.jpeg?h=365&w=240&dpr=2",
+            prodType: "Accolade Hoodie",
+            MRP :    7138.68,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        
+        {
+            prodName: "Sweaty Betty",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/fea46c65-9078-450a-85b9-f81048305109.jpeg?h=365&w=240&dpr=2",
+            prodType: "Glisten Seamless top",
+            MRP :    4652.17,
+            Star : "★★★★★",
+            Rating : 5,
+            Deliver : "Free Delivery",
+            Color : "White",
+            
+        },
+        
+        {
+            prodName: "Beyond Yoga",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/fcc56bcc-384c-45de-bf23-534f0537a473.jpeg?h=365&w=240&dpr=2",
+            prodType: "Caught in the Midi High Waist Leggings",
+            MRP :    4668.22,
+            Star : "★★★",
+            Rating : 3,
+            Deliver : "Free Delivery",
+            Color : "Blue",
+            
+        },
+        
+        {
+            prodName: "Hue",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/2d58c335-fffc-43e3-8661-1a524ac98a17.jpeg?h=365&w=240&dpr=2",
+            prodType: "Body Fusion Sports Bra (2 for $60)",
+            MRP :  4652.17,
+            Star : "★★★★",
+            Rating : 4,
+            Deliver : "Free Delivery",
+            Color : "Black",
+            
+        },
+        
+        
+
+    ];
+
+    localStorage.setItem("womenProductData", JSON.stringify(womenProductData));
+
+    var womenData = JSON.parse(localStorage.getItem("womenProductData"));
+
+    var cartArr = JSON.parse(localStorage.getItem("cartArrItems")) || [];
+
+    var rightBox = document.querySelector("#rightBox");
+
+    productList();
+
+    function handleSort() {
+        var sortByFeatured = document.getElementById("sortByFeatured").value;
+        if (sortByFeatured === "low") {
+            womenData = womenData.sort(function (a, b) {
+                return a.MRP - b.MRP;
+            })
+        }
+        if (sortByFeatured === "high") {
+            womenData = womenData.sort(function (a, b) {
+                return b.MRP - a.MRP;
+            })
+        }
+        if (sortByFeatured === "sortByRating") {
+            womenData = womenData.sort(function (a, b) {
+                return b.Rating - a.Rating
+            })
+        }
+        if (sortByFeatured === "sortByAlphabetical") {
+            womenData = womenData.sort(function (a, b) {
+                return a.prodName > b.prodName ? 1 : b.prodName > a.prodName ? -1 : 0
+            })
+        }
+        console.log("here");
+        productList(womenData)
+    }
+
+    function productList() {
+        document.querySelector("#rightBox").innerHTML = "";
+     womenData.map(function (item) {
+        var imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDivClass");
+        var img = document.createElement("img");
+        img.setAttribute("class","imgClass")
+        img.setAttribute("src",item.prodImage);
+        var p1 = document.createElement("p");
+        p1.setAttribute("class","p1Class");
+        p1.textContent = item.prodName;
+        var p2 = document.createElement("p");
+        p2.setAttribute("class","p2Class");
+        p2.textContent = item.prodType;
+        var p3 = document.createElement("p");
+        p3.setAttribute("class","p3Class");
+        p3.textContent = `INR ${item.MRP}`;
+        var p4 = document.createElement("p");
+        p4.setAttribute("class","p4Class");
+        p4.textContent = item.Star;
+        var p5 = document.createElement("p");
+        p5.setAttribute("class","p5Class");
+        p5.textContent = item.Deliver;
+        var btn = document.createElement("button");
+        btn.setAttribute("class","addToCartBtn");
+        btn.textContent = "Add to Cart";
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        btn.addEventListener("click", function() {
+        addToCart(item);
+    });
+        imgDiv.append(img, p1, p2, p3, p4, p5,btn);
+        rightBox.append(imgDiv);
+     })
+    }
+    // var rightBoxChild = document.createElement("")
+
+    // next
+
     
-    function signUp(e){
-        e.preventDefault();
-        var email = document.getElementById("email").value;
-        var UserCredentials = {
-            email:email,
+    function toggleDisplay(divID, id) {
+        var div = document.getElementById(divID);
+        var icon_id = document.getElementById(id);
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            icon_id.innerText = ' - ';
+        } else {
+            div.style.display = "none";
+            icon_id.innerText = ' + ';
+        }
+    }
 
-        };
-        // for(var i = 0;i<userArr.length;i++){
-        //     if (userArr[i].email == email )
-        //     {
-        //         console.log("efe");
-        //         window.location.href = "signin.html";
-        //     }else
-        userArr.push( UserCredentials);
-        localStorage.setItem("userData", JSON.stringify(userArr));
-        // console.log("here");
-         window.location.href = "signup1.html";
+    var tick = 0;
 
+    function Natori() {
+        
+        console.log("here");
+        
+        womenData = womenData.filter(function (elem) {
+            // arr.push(elem.prodName == "Natori");
+            return elem.prodName == "Natori";
+        })
+        productList(womenData);
+        
+        // window.location.reload(true);
     
-
-
-
-
-
+    }
+    function Zella() {
+        // var arr = womenData;
+        console.log("here");
+        womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Zella";
+        })
+        
+        // window.location.reload(true);
+    
+        productList(womenData);
 
         
-}
-function dropDown(a) {
+    }
+    function FreePeople() {
+        // var arr = womenData;
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Free People";
+        })
+        productList(womenData);
+    }
+    function vuori() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "vuori";
+        })
+        productList(womenData);
+    }
+    function Nike() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Nike";
+        })
+        productList(womenData);
+    }
+    function Adidas() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Adidas";
+        })
+        productList(womenData);
+    }
+    function SweatyBetty() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Sweaty Betty";
+        })
+        productList(womenData);
+    }
+    
+    
+
+    // ------
+    function createBrandFilters() {
+        var brands_div = document.getElementById('product-grid-brand-content');
+        brands_div.innerHTML = "";
+
+        var brands = {};
+
+        currentArray.forEach(function (product) {
+            if (brands[product.brand] === undefined) {
+                brands[product.brand] = 1;
+                var div = document.createElement('div');
+                div.setAttribute('class', 'product-grid-checkbox-div');
+
+                var checkbox = document.createElement('input');
+                checkbox.setAttribute('class', `product-grid-brand product-grid-checkmark`);
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.value = `${product.brand}`;
+                checkbox.onchange = addBrandFilter;
+
+                var label = document.createElement('p');
+                label.setAttribute('for', `${product.brand}`);
+                label.innerText = `${product.brand}`;
+
+                div.append(checkbox, label);
+                brands_div.appendChild(div);
+            }
+        })
+    }
+
+    
+    function addToCart(item){
+            var itemsPresent = false;
+            for(var i = 0; i < cartArr.length; i++){
+                if(item.prodImage == cartArr[i].prodImage){
+                    itemsPresent = true;
+                    break;
+                }
+            }
+            if(itemsPresent == true){
+                alert(`Item already added`);
+            }
+            else {
+            alert(`Added`);
+            cartArr.push(item);
+            localStorage.setItem("cartArrItems",JSON.stringify(cartArr));
+            }
+        }
+    
+
+    document.getElementById("cart").addEventListener("click", function () {
+        window.location.href = "cart.html";
+    })
+    document.getElementById("checkout").addEventListener("click", function () {
+        window.location.href = "checkout.html";
+    })
+
+
+    function dropDown(a) {
         var show1 = document.querySelector("#main-content")
         var show = document.querySelector(`.${a}-content`)
         show1.style.display = "block";
@@ -2914,4 +3442,7 @@ function dropDown(a) {
     }
     
 
+
+
+    
 </script>

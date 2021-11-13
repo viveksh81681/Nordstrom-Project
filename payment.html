@@ -252,7 +252,7 @@
         }
         .costss{
             margin-top: 15px;
-            margin-left: 15px;
+            /* margin-left: 10px; */
            
             display: inline-block;
             width: 180px;
@@ -348,13 +348,13 @@
             <br>
             <div class = "itemsShipping">
                 Items</div>
-            <div class = "costss">₹3,369</div><br/>
+            <div class = "costss realPrice">₹3,369</div><br/>
             <div class = "itemsShipping">Shipping </div>
-            <div class = "costss">₹2,609</div><br/>
+            <div class = "costss">INR 2,609</div><br/>
             <div class = "itemsShipping">Duties & Taxes</div>
-            <div class = "costss">₹2,516</div>
+            <div class = "costss">INR 2,516</div>
             <div class = "itemsShipping"><h1>Total</h1></div>
-            <div class = "costss"><h1>₹8,494</h1></div>
+            <div class = "costss totalPrice"><h1>₹8,494</h1></div>
             <div id = smalBord></div>
         </div>
        
@@ -364,9 +364,30 @@
 </html>
 <script>
     document.getElementById("placeTheOrder2").addEventListener("click", function(){ 
-        alert("Order placed Succesfully")  
+        // alert("Order placed Succesfully")
+        window.location.href = "thanks.html"  
     })
     document.querySelector(".placeTheOrder").addEventListener("click", function(){ 
-        alert("Order placed Succesfully")  
+        // alert("Order placed Succesfully")
+        window.location.href = "thanks.html"  
     })
+
+
+    var total = JSON.parse(localStorage.getItem("total"));
+console.log(total);
+var realPrice = document.querySelector(".realPrice");
+realPrice.textContent = total.value;
+
+displayTotal();
+function displayTotal() {
+    // document.querySelector(".realPrice").textContent = "";
+    
+     total.map(function (item) {
+        var realPrice = document.querySelector(".realPrice");
+        realPrice.textContent = `INR ${item.total} `;
+        var totalPrice = document.querySelector(".totalPrice");
+        var sum = item.total + 2609 + 2516; 
+        totalPrice.textContent =  `INR ${sum} `;
+})
+}
 </script>

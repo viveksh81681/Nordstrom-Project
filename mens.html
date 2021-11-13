@@ -1,484 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
-    <title>Nordstorm</title>
-    <style>
-        #container{
-           height:500px;
-           width:500px;
-          margin-left: 30%;
-           margin-top: 200px;
-           
-           }
-        
-           #container>p{
-               color: #8e8e8e;
-
-           }
-
-          button{
-          width:80%;
-           height: 35px;
-          font:25px;
-          background-color:black;
-          color: white;
-          margin-top: 10px;
-        }
-      
-        input{
-         width: 75%;
-         padding: 10px;
-       
-   
-         
-        }
-        p>span{
-        text-decoration: underline;
-    }
-    #firstbar {
-            background-color: black;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 0.15px;
-        }
-
-        #firstbar a {
-            cursor: pointer;
-            color: rgb(248, 246, 246);
-        }
-
-        #firstbar p {
-            float: left;
-            margin-left: 700px;
-
-        }
-
-        #firstbar button {
-            float: right;
-            color: white;
-            background-color: black;
-            border: none;
-            cursor: pointer;
-            font-size: 13px;
-            margin-top: 10px;
-        }
-
-        #firstbar div button img {
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            margin-right: 5px;
-            margin-top: 5px;
-        }
-
-        #firstbar div button span {
-            /* vertical-align: top; */
-            margin-top: 15px;
-        }
-
-        .clear {
-            clear: both
-        }
-
-        #navbar {
-            margin-top: 25px;
-            padding-bottom: 13px;
-
-        }
-
-        #nav {
-            width: 96.5%;
-            margin: auto;
-        }
-
-        #inside-div {
-            display: flex;
-
-        }
-
-        #logo {
-            margin-top: 10px;
-            width: 17%;
-            font-size: 13px;
-        }
-
-        #category {
-            width: 65%;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #category>button {
-            display: inline;
-            border: none;
-            background-color: white;
-            margin-right: 20px;
-            color: #393939;
-            font-family: Brandon Text, Arial, sans-serif;
-            font-weight: 400;
-            font-size: 18px;
-            transition-duration: 1s;
-        }
-
-        #red {
-            color: #d61f27 !important;
-        }
-
-        #search {
-            display: flex;
-            width: 20%;
-            margin-right: 0px !important;
-            margin-left: 10px;
-        }
-
-        #search>div {
-
-            margin-right: 20px;
-        }
-
-        #search>div:nth-last-child(1) {
-            margin-right: 0px;
-        }
-
-        #bag {
-            width: 15% !important;
-            height: 50px !important;
-
-
-        }
-
-        #bag img {
-            width: 100%;
-            margin-top: 3px;
-        }
-
-        #bag-image {
-            width: 100%;
-            height: 40px;
-        }
-
-        #one,
-        #two {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 14px;
-            color: #393939;
-            font-family: Brandon Text, Arial, sans-serif;
-        }
-
-        #one img {
-            width: 100%;
-            height: 30px;
-        }
-
-        #bag>a>img {
-            width: 100%;
-            height: 25px;
-        }
-
-        #two>img {
-            width: 16px;
-            height: 16px;
-        }
-
-        .img>img {
-            width: 20px;
-            height: 20px;
-        }
-
-        #category>button:nth-last-child(1) {
-            margin-left: 17px;
-            margin-right: 0px;
-        }
-
-        #search p {
-            margin-left: 3px;
-        }
-
-        .black-content,
-        .sale-content,
-        .Women-content,
-        .Men-content,
-        .Kids-content,
-        .YoungAdult-content,
-        .Activewear-content,
-        .Home-content,
-        .Beauty-content,
-        .Designer-content {
-            display: block;
-            height: 0px;
-            width: 97%;
-            position: absolute;
-            overflow: hidden;
-            background-color: #ffffff;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 0px 25px;
-            padding-bottom: 0px;
-            z-index: 1;
-            transition: height 0.5s ease-out;
-            overflow-y: auto;
-
-        }
-
-        #inputBox {
-            display: block;
-            margin-top: 35px;
-            position: absolute;
-            top: 90px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 6;
-            border: none;
-            padding: 0px 20px;
-            width: 400px;
-            text-align: left;
-        }
-
-        #signIN {
-            display: none;
-            position: absolute;
-            top: 100px;
-            right: 20px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            border: none;
-            z-index: 7;
-            padding: 10px 10px;
-            background-color: white;
-            width: 16% !important;
-            margin-top: 20px;
-        }
-
-        #signIN li {
-            margin: 10px;
-            margin-bottom: 20px;
-            font-size: 12px;
-        }
-
-        #signIN li:nth-child(1) {
-            width: 65%;
-            background-color: black;
-            text-align: center;
-            padding: 5px 20px;
-            margin-right: 15px;
-            text-align: left;
-        }
-
-        #signIN li:nth-child(2) {
-            width: 65%;
-            border: 1px solid black;
-            text-align: center;
-            padding: 5px 20px;
-            margin-right: 15px;
-            text-align: left;
-        }
-
-        #signIN a {
-            text-decoration: none;
-            color: #393939;
-        }
-
-        #signIN li:nth-child(1)>a {
-            color: white;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .mainh3 {
-            margin-top: 25px;
-            /* margin-left: 60px;
-        } */
-            font-size: 70px;
-        }
-
-        .black-content>div,
-        .sale-content>div,
-        .Women-content>div,
-        .Men-content>div,
-        .Kids-content>div,
-        .YoungAdult-content>div,
-        .Activewear-content>div,
-        .Home-content>div,
-        .Beauty-content>div,
-        .Designer-content>div {
-            display: flex;
-        }
-
-        .black-content>div>div,
-        .sale-content>div>div,
-        .Women-content>div>div,
-        .Men-content>div>div,
-        .Kids-content>div>div,
-        .YoungAdult-content>div>div,
-        .Activewear-content>div>div,
-        .Home-content>div>div,
-        .Beauty-content>div>div,
-        .Designer-content>div>div {
-            margin-right: 80px;
-        }
-
-        .black-content ul,
-        .sale-content ul,
-        .Women-content ul,
-        .Men-content ul,
-        .Kids-content ul,
-        .YoungAdult-content ul,
-        .Activewear-content ul,
-        .Home-content ul,
-        .Beauty-content ul,
-        .Designer-content ul {
-            list-style-type: none
-        }
-
-        .black-content a,
-        .sale-content a,
-        .Women-content a,
-        .Men-content a,
-        .Kids-content a,
-        .YoungAdult-content a,
-        .Activewear-content a,
-        .Home-content a,
-        .Beauty-content a,
-        .Designer-content a {
-            color: #393939;
-            font-size: 18px;
-            line-height: 1.4;
-            text-decoration: none;
-        }
-
-
-        .black-content li>a,
-        .sale-content li>a,
-        .Women-content li>a,
-        .Men-content li>a,
-        .Kids-content li>a,
-        .YoungAdult-content li>a,
-        .Activewear-content li>a,
-        .Home-content li>a,
-        .Beauty-content li>a,
-        .Designer-content li>a {
-            font-size: 18px;
-        }
-
-        .black-content li,
-        .sale-content li,
-        .Women-content li,
-        .Men-content li,
-        .Kids-content li,
-        .YoungAdult-content li,
-        .Activewear-content li,
-        .Home-content li,
-        .Beauty-content li,
-        .Designer-content li {
-            margin-bottom: 10px;
-        }
-
-        .firstDiv {
-            margin-right: 30px;
-        }
-
-        hr {
-            background-color: rgb(223, 213, 213);
-            height: 1px;
-            width: 160px;
-            margin-bottom: 10px;
-            border: none;
-        }
-
-        .topMargin {
-            margin-top: 30px;
-        }
-
-        .marginRem {
-            margin-right: 0px;
-            width: 15%;
-        }
-
-        .marginRem img {
-            width: 100%;
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        .decor {
-            font-size: 11px;
-        }
-
-        .decor+hr {
-            width: 110px;
-            background-color: black;
-        }
-
-        ul {
-            list-style-type: none
-        }
-
-        /* fotter********* */
-        *{
-            font-family: Arial,  sans-serif;
-        }
-        .footer {
-            display: flex;
-            background-color:whitesmoke;
-            
-        }
-    
-        .footer-col{
-            flex-basis: 270px;
-            padding:10px;
-    
-        }
-        .heading{
-            font-size: 24px;
-            font-weight: 700;
-        }
-        .ul{
-            list-style-type: none;
-            text-align:start;
-        }
-    
-        .ul > li{
-            padding:7px;
-            font-size: 15px;
-         
-        }
-        .ul> li:hover{
-            text-decoration: underline;
-            text-decoration-color: black;
-            text-decoration-thickness: 1px;
-        }
-    
-        .footer > p{
-            flex-basis: 120px;
-            margin-left: 60px;
-            font-size: 12px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    
-        .footer > p:hover{
-            text-decoration: underline;
-            text-decoration-color: black;
-            text-decoration-thickness: 1px;
-        }
-
-
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mens.css">
 </head>
+
 <body>
+
     <div onclick="removeDropdown()">
         <div id="firstbar">
             <div>
-                <p style="margin-left:400px">
+                <p>
                     <strong>Shipping outside of the U.S. or Canada?</strong>
                     <a title="Learn About International Shipping" href="">Learn About International Shipping</a>
                 </p>
-                <!-- <button href=""><img src="https://n.nordstrommedia.com/alias/IN.gif"><span>India</span></button> -->
+                <button href=""><img src="https://n.nordstrommedia.com/alias/IN.gif"><span>India</span></button>
             </div>
             <div class="clear"></div>
         </div>
@@ -490,7 +29,7 @@
     
     
                 <div id="logo">
-                    <a href="landing_page.html"><img src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"></a>
+                    <a href="home.html"><img src="https://n.nordstrommedia.com/alias/nordstrom-logo.svg"></a>
                 </div>
     
     
@@ -527,20 +66,20 @@
                     </div>
     
                     <div id="two" onmouseenter="removeBar()">
-                        <p onmouseenter="signBar()">Sign In</p>
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU"></img>
+                        <p onmouseenter="signBar()">Hi, Malaya</p>
+                        <!-- <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkXLgiLmUs1qs3M7byaf01fztGJV4lm0YHkw&usqp=CAU"></img> -->
                     </div>
     
     
                     <div id="signIN" onmouseleave="removeSignBar()">
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="signin.html">Sign In</a>
                             </li>
                             <li>
-                                <a href="signup1.html">Create Account</a>
-                            </li>
+                                <a href="signup.html">Create Account</a>
+                            </li> -->
                             <li>
                                 <a href=""><span>Your Account</span></a>
                             </li>
@@ -567,7 +106,7 @@
     
     
                     <div id="bag">
-                        <a href=""><img id="bag-image"
+                        <a href="cart.html"><img id="bag-image"
                                 src="https://cdn-icons-png.flaticon.com/128/687/687259.png"></img></a>
                     </div>
                 </div>
@@ -1014,7 +553,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Activewear</a>
+                                <a href="activewear.html">Activewear</a>
                             </li>
                             <li>
                                 <a href="">Blazers</a>
@@ -1277,7 +816,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Activewear</a>
+                                <a href="mens.html">Activewear</a>
                             </li>
                             <li>
                                 <a href="">Blazers & Sport Coats</a>
@@ -1331,7 +870,7 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Boots</a>
+                                <a href="boot.html">Boots</a>
                             </li>
                             <li>
                                 <a href="">Comfort</a>
@@ -1399,10 +938,10 @@
                                 </h3>
                             </li>
                             <li>
-                                <a href="">Designer Clothing</a>
+                                <a href="mens.html">Designer Clothing</a>
                             </li>
                             <li>
-                                <a href="">Designer Shose</a>
+                                <a href="boot.html">Designer Shose</a>
                             </li>
                             <li>
                                 <a href="">Designer Accessories</a>
@@ -2168,7 +1707,7 @@
                                 <a href="">Accent Furniture</a>
                             </li>
                             <li>
-                                <a href="product_grid.html">Art, Wall Decor & Mirrors</a>
+                                <a href="">Art, Wall Decor & Mirrors</a>
                             </li>
                             <li>
                                 <a href="">Books, Games & Puzzles</a>
@@ -2275,7 +1814,7 @@
                             </li>
                             <li>
                                 <h3 class="mainh3">
-                                    <a href="">Luggage & Travel</a>
+                                    <a href="bag.html">Luggage & Travel</a>
                                 </h3>
                             </li>
                             <li>
@@ -2726,16 +2265,110 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <div id = "container">
-    <h1>SignIn | Create Account</h1>
-    <p>Enter your email to get started.</p>
-    <h5>Email</h5>
-    <input id = "email" type="email" placeholder=""/>
-    <p>By tapping Next, you agree to our <span>Privacy Policy</span> and <span>Terms & <br/>Conditions.</span></p>
-    <button id = "maccc">Next</button>
+
+
+
+
+
+    <!-- nav complete -->
+    <div id="productbox">
+
+        <div id="leftBox">
+            <h1 style="color: red;">Filters</h1>
+            <div id="product-grid-filter">
+    
+                <div id="product-grid-brand">
+                    <hr>
+        
+                    <div class="product-grid-filter-div">
+        
+                        <p>Brand</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-brand-icon" onclick="toggleDisplay('product-grid-brand-content', 'product-grid-brand-icon')"> + </span>
+                    </div>
+        
+                    <!-- <span class="material-icons" id = "search-icon">search<input id = "search-brand" placeholder = "Find a brand"/></span> -->
+        
+                    <div id="product-grid-brand-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Deny Designs" name="brand" onclick="Monclear()"><p for="Deny Designs">Monclear</p></div>
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Chopvalue" name="brand" onclick="Burberry()"><p for="Chopvalue" >Burberry</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Givenchy()"><p for="Oliver Gal">Givenchy</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="MonclearGrenoble()"><p for="Oliver Gal">Monclear Grenoble</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="Off-White()"><p for="Oliver Gal">Off-White</p></div>
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Oliver Gal" onclick="GoldenGoose()"><p for="Oliver Gal">GoldenGoose</p></div>
+
+                    
+                    <div class="product-grid-checkbox-div"><input class="product-grid-brand product-grid-checkmark" type="checkbox" value="Marimekko" onclick="vuori()"><p for="Marimekko">vuori</p></div></div>
+        
+                    <hr>
+                </div>
+
+                <!-- ------- -->
+
+                
+
+                <!-- ----- -->
+                
+        
+        
+        
+                <div id="product-grid-color">
+                    <div class="product-grid-filter-div">
+                        <p>Color</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-color-icon" onclick="toggleDisplay('product-grid-color-content', 'product-grid-color-icon')"> + </span>
+                    </div>
+        
+        
+        
+                    <div id="product-grid-color-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Green" onclick="Black()"><p for="Green" >Black</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Pink"><p for="Pink">Pink</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Grey"><p for="Grey">Grey</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Brown"><p for="Brown">Brown</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Gold"><p for="Gold">Gold</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Black"><p for="Black">Black</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Red"><p for="Red">Red</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Blue"><p for="Blue">Blue</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Yellow"><p for="Yellow">Yellow</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Orange"><p for="Orange">Orange</p></div><div class="product-grid-checkbox-div"><input class="product-grid-color product-grid-checkmark" type="checkbox" value="Teal"><p for="Teal">Teal</p></div></div>
+                    <hr>
+                </div>
+        
+                <div id="product-grid-type">
+                    <div class="product-grid-filter-div">
+                        <p>Product Type</p>
+                        <span class="material-icons product-grid-plus-icon" id="product-grid-type-icon" onclick="toggleDisplay('product-grid-type-content', 'product-grid-type-icon')"> + </span>
+                    </div>
+        
+        
+                    <div id="product-grid-type-content">
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Decorative Accents"><p for="Decorative Accents">Hoodie</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Framed Art"><p for="Framed Art">Pants</p></div>
+                        <div class="product-grid-checkbox-div"><input class="product-grid-type product-grid-checkmark" type="checkbox" value="Wall Hanging"><p for="Wall Hanging">T-Shirt</p></div></div>
+        
+                    <hr>
+                </div>
+        
+            </div>
+        </div>
+        <div id="RightMainBox">
+            <h1>Men's Designer Clothing</h1>
+            <div id="filter">
+                <div style=" width: 20%; height: 100%;"></div>
+                <div style="width: 20%; height: 100%;">
+                    <select id="sortByFeatured" onchange="handleSort()">
+                        <option value="low">Sort by: low to high</option>
+                        <option value="high">Sort by:high to low</option>
+                        <option value="sortByRating">Sort by Rating</option>
+                        <option value="sortByAlphabetical">Sort by Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+        <div id="rightBox">
+        
+
+        </div>
     </div>
-    <div class="footer">
+    </div>
+    <!-- footer -->
+     <div class="footer">
         <div class="footer-col">
             
             <ul class="ul">
@@ -2824,41 +2457,639 @@
         <p>Intrest Based Ads</p>
         <p>&copy;2021 Nordstrom,Inc</p>
     </div> 
-    
 </body>
 </html>
+
 <script>
-     document.querySelector("#maccc").addEventListener("click" , signUp);
-    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+    var womenProductData = [
+    {
+            prodName: "Moncler",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/7348c5b4-0d1f-4c5c-a57d-31d335f20819.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType:  "Maya Lacquered Down Jacket",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 118416.84 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5c929fca-4c23-41c2-b126-a52c62a9c60d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Sherwood Monogram Button-Up Shirt",
+            MRP :  35324.34 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/0a8ca6c8-7cd2-415e-96d7-a44caa2cc3cd.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Eddie Pique Polo",
+            MRP : 28098.91 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/525b3e7f-d630-4cc5-af0d-bc3bc1fa6b45.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Walton TB Embroidered Short Sleeve Stretch Cotton Pique Polo",
+            MRP : 29704.59 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry ",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1efcab5f-04a4-411a-b971-74ea91e28a2b.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Somerton Plaid Button-Up Shirt",
+            MRP :35338.47 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Givenchy",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/2117bd2c-037d-444c-8cae-3cb625eb5f2c.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Slim Fit Logo T-Shirt",
+            MRP :39535.65,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Monclear Grenoble",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d616a1ad-6856-4704-b39b-47104e5e4c29.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Water Repellent Down Puffer Jacket",
+            MRP : 116804.12 ,
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/fa623b2b-f45a-4b88-bc95-d2fb4ada1e73.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Montreuil Logo Water Resistant Lightweight Down Puffer Vest",
+            MRP : 115958.96 ,
+            
+            
+        },
+        {
+            prodName: "Off-White",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/679f56e5-e50b-4cf0-af91-2a439d18386a.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType:  "Acrylic Arrows Logo Slim Cotton Graphic Tee",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 30711.63 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/7233b45c-5dcf-4f1d-8b6b-f6bc9d5d1642.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Men's Tricolor Stripe Tape Track Jacket",
+            MRP : 62211.95 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/e6d0488d-58ae-462b-81a3-eab8f0390bc1.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Logo Patch Tipped Cotton Pique Polo",
+            MRP : 29084.78 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/dab4e0d2-b7f1-4aa2-b1f9-4d5bebc4f952.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Montcla Quilted Down Puffer Jacket",
+            MRP : 142522.81 ,
+            
+            
+        },
+        {
+            prodName: "Golden Goose",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/efff05ba-41eb-46e0-b096-d390a20f7a0d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Star Logo Cotton Tee",
+            MRP :  7856.85 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/2e4773da-f5bb-4f5d-a155-2fc2128fcec8.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Coutard Lacquered Down Jacket",
+            MRP : 114874.77 ,
+           
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/268d6d59-b642-42d8-8e1b-234ada92592d.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Haekhurst TB Button Wool & Cashmere Coat",
+            MRP : 123882.37 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/461c0453-55c5-4afc-8b9f-b131099f817f.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196",
+            prodType: "Ecrins Hooked Down Puffer Jacket",
+            MRP :  155240.86 ,
+           
+            
+        },
+        {
+            prodName: "Moncler",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/e561d5fd-b05a-4f86-be20-1d129a8a9fec.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Maya Lacquered Jeans",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 126416.84 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/14bff473-2f13-4cf0-8324-6cfc9b4549f3.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sherwood Monogram Motif Slim Fit Sweat Shirt",
+            MRP : 39324.34 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5a02d121-b9e1-48a4-a239-dd4d0b7449a7.jpeg?h=365&w=240&dpr=2",
+            prodType: "Eddie Pique Polo Jacket",
+            MRP : 28248.91 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/19219e2c-b9de-4a70-af9a-54c94a5d1f34.jpeg?h=365&w=240&dpr=2",
+            prodType: "Walton TB Embroidered T-Shirt",
+            MRP :  29904.56 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry ",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/47883db3-fc94-4d57-9ec2-21fb67cfa90f.jpeg?h=365&w=240&dpr=2",
+            prodType: "Somerton Plaid Sweat Shirt",
+            MRP : 32338.47 , 
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Givenchy",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/89f25a65-e567-4130-b330-53bcb3cbe8c2.jpeg?h=365&w=240&dpr=2",
+            prodType: "Slim Fit Logo T-Shirt",
+            MRP : 34493.65 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Monclear Grenoble",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c9c44931-58b8-4d02-9b79-9bd5ce16c49e.jpeg?h=365&w=240&dpr=2",
+            prodType: "Water Repellent Down Puffer Jacket",
+            MRP :  163804.12 ,
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/865245c2-ae35-42bd-b141-9531f7d3b77d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Montreuil Logo Water Resistant T-Shirt",
+            MRP :  175202.90 ,
+            
+            
+        },
+        {
+            prodName: "Off-White",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d616a1ad-6856-4704-b39b-47104e5e4c29.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Acrylic Arrows Logo Slim Cotton Jacket",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP :  39585.63 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5a1b8c93-3ddd-4c8b-aeac-746599e71d95.jpeg?h=365&w=240&dpr=2",
+            prodType: "Men's Tricolor Stripe Tape Track Jacket",
+            MRP : 69511.95 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/d3628002-8d04-4eac-8d50-d332bfca515d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Logo Patch Tipped Cotton T-Shirt",
+            MRP : 27087.78 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/b28bcdff-eb78-4a37-aa2b-ac3e6168f3a6.jpeg?h=365&w=240&dpr=2",
+            prodType: "Montcla Quilted Down T-Shirt",
+            MRP : 142862.81 ,
+            
+            
+        },
+        {
+            prodName: "Golden Goose",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/7f515d7f-1bbc-44d2-9504-2cc350b53b7e.jpeg?h=365&w=240&dpr=2",
+            prodType: "Star Logo Cotton Socks",
+            MRP : 5257.85 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1acea38f-476e-460f-9131-212c9f1b96cb.jpeg?h=365&w=240&dpr=2",
+            prodType: "Coutard Lacquered Underwear",
+            MRP : 123586.77 ,
+           
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1981069c-58cf-4541-96c8-5d7836d49f48.jpeg?h=365&w=240&dpr=2",
+            prodType: "Haekhurst TB Button Wool & Cashmere Jacket",
+            MRP : 121999.37 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/5bb2b57a-42f9-4eab-990b-7d53446b6547.jpeg?h=365&w=240&dpr=2",
+            prodType: "Ecrins Hooked Down Puffer Jacket",
+            MRP : 122499.86 ,
+           
+            
+        },
+        {
+            prodName: "Off-White",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/7233b45c-5dcf-4f1d-8b6b-f6bc9d5d1642.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Acrylic Arrows Logo Slim Cotton Jacket",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 39999.99 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/679f56e5-e50b-4cf0-af91-2a439d18386a.jpeg?h=365&w=240&dpr=2",
+            prodType: "Men's T-Shirt",
+            MRP :  60000.00 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/fbbf2f18-c37e-4fb7-876f-d536d4258b04.jpeg?h=365&w=240&dpr=2",
+            prodType: "Logo Patch Tipped Socks",
+            MRP :  24444.44 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/424cd569-2878-463b-b081-8ae4991af725.jpeg?h=365&w=240&dpr=2",
+            prodType: "Montcla Quilted Socks",
+            MRP : 121999.99 ,
+            
+            
+        },
+        {
+            prodName: "Golden Goose",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/725871e7-b0d3-4f01-bc72-5037d36b2e9d.jpeg?h=365&w=240&dpr=2",
+            prodType: "Star Logo Cotton Jacket",
+            MRP : 7656.45 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/2e4773da-f5bb-4f5d-a155-2fc2128fcec8.jpeg?h=365&w=240&dpr=2",
+            prodType: "Coutard Lacquered Down Jacket",
+            MRP : 111874.77 ,
+           
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/55765331-f0a7-4104-8422-d53911870ada.jpeg?h=365&w=240&dpr=2",
+            prodType: "Haekhurst T-Shirt",
+            MRP : 159682.37 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/69f59ce8-6a47-49b0-9443-95fba745970f.jpeg?h=365&w=240&dpr=2",
+            prodType: "Ecrins Hooked Down Puffer Jacket",
+            MRP : 155860.86 ,
+           
+            
+        },
+        {
+            prodName: "Moncler",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/b695caa4-4acf-4c18-af96-a136b225462b.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Maya Lacquered Socks",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 112215.84 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/3e148efc-08fc-4514-ba5b-e28404f19550.jpeg?h=365&w=240&dpr=2",
+            prodType: "Sherwood Monogram Motif  Button-Up T-Shirt",
+            MRP : 37456.34 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/bda0e21e-5f1d-4775-85d3-1c2a4337e760.jpeg?h=365&w=240&dpr=2",
+            prodType: "Eddie Pique Polo",
+            MRP : 25075.91 ,
+            Star : "★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/6a902521-8537-41ab-85fc-3492597e6466.jpeg?h=365&w=240&dpr=2",
+            prodType: "Walton TB Embroidered Short Sleeve Stretch Cotton Pique Polo",
+            MRP : 22465.56 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Burberry ",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/0a8d7825-e24a-4274-b88f-7a8f347324c9.jpeg?h=365&w=240&dpr=2",
+            prodType: "Somerton Plaid Button-Up Sweat Shirt",
+            MRP : 34635.47 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Givenchy",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/00387a03-952c-4826-ba9f-5cf0689e6d39.jpeg?h=365&w=240&dpr=2",
+            prodType: "Slim Fit Logo Underwear",
+            MRP : 37759.65 ,
+            Star : "★★★★★",
+            
+            
+        },
+        {
+            prodName: "Monclear Grenoble",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/b774ae6b-68a8-46bd-a57d-84216e97d10a.jpeg?h=365&w=240&dpr=2",
+            prodType: "Water Repellent Socks",
+            MRP :  141748.14 ,
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/c7247a4a-5111-4695-9284-971149db4613.jpeg?h=365&w=240&dpr=2",
+            prodType: "Montreuil Logo Water Resistant Lightweight Down Puffer Jacket",
+            MRP : 145415.74 ,
+            
+            
+        },
+        {
+            prodName: "Off-White",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/268d6d59-b642-42d8-8e1b-234ada92592d.jpeg?h=365&w=240&dpr=2",
+            prodType:  "Acrylic Arrows Logo Slim Cotton Graphic Coat",
+            // prodSubType: "Live In Pocket Joggers",
+            MRP : 34754.85 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1b8c12a7-6e8d-4684-881d-d5a44edd6c8e.jpeg?h=365&w=240&dpr=2",
+            prodType: "Men's Tricolor Stripe Tape Track Jacket",
+            MRP : 69999.99 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/bbfbfce6-5f15-41e7-8603-578f55960f5e.jpeg?h=365&w=240&dpr=2",
+            prodType: "Logo Patch Tipped Cotton Pique Underwear",
+            MRP : 24454.75 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/1b6c1bb1-fc5b-487a-8e30-916108b10ba0.jpeg?h=365&w=240&dpr=2",
+            prodType: "Montcla Quilted Down Socks",
+            MRP : 14075.25 ,
+            
+            
+        },
+        {
+            prodName: "Golden Goose",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/bfaa97a5-b226-4b0c-89a3-401d192287b8.jpeg?h=365&w=240&dpr=2",
+            prodType: "Star Logo Cotton Tee",
+            MRP : 8555.55 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/59a3645f-e179-4846-b8b6-2be6bbff7df8.jpeg?h=365&w=240&dpr=2",
+            prodType: "Coutard Lacquered Down Tee",
+            MRP : 127964.99 ,
+           
+        },
+        {
+            prodName: "Burberry",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/ca277511-33ff-4aea-9518-65c78b69218c.jpeg?h=365&w=240&dpr=2",
+            prodType: "Haekhurst TB Underwear",
+            MRP : 121321.99 ,
+            
+            
+        },
+        {
+            prodName: "Monclear",
+            prodImage : "https://n.nordstrommedia.com/id/sr3/04f5da64-5a62-41a6-88b7-a576f3a2be8c.jpeg?h=365&w=240&dpr=2",
+            prodType: "Ecrins Hooked Down Puffer Jacket",
+            MRP : 115752.79 ,
+           
+            
+        },
+        
+        
+
+    ];
+
+    localStorage.setItem("womenProductData", JSON.stringify(womenProductData));
+
+    var womenData = JSON.parse(localStorage.getItem("womenProductData"));
+
+    var rightBox = document.querySelector("#rightBox");
+
+    productList();
+
+    function handleSort() {
+        var sortByFeatured = document.getElementById("sortByFeatured").value;
+        if (sortByFeatured === "low") {
+            womenData = womenData.sort(function (a, b) {
+                return a.MRP - b.MRP;
+            })
+        }
+        if (sortByFeatured === "high") {
+            womenData = womenData.sort(function (a, b) {
+                return b.MRP - a.MRP;
+            })
+        }
+        if (sortByFeatured === "sortByRating") {
+            womenData = womenData.sort(function (a, b) {
+                return b.Rating - a.Rating
+            })
+        }
+        if (sortByFeatured === "sortByAlphabetical") {
+            womenData = womenData.sort(function (a, b) {
+                return a.prodName > b.prodName ? 1 : b.prodName > a.prodName ? -1 : 0
+            })
+        }
+        console.log("here");
+        productList(womenData)
+    }
+
+    function productList() {
+        document.querySelector("#rightBox").innerHTML = "";
+     womenData.map(function (item) {
+        var imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDivClass");
+        var img = document.createElement("img");
+        img.setAttribute("class","imgClass")
+        img.setAttribute("src",item.prodImage);
+        var p1 = document.createElement("p");
+        p1.setAttribute("class","p1Class");
+        p1.textContent = item.prodName;
+        var p2 = document.createElement("p");
+        p2.setAttribute("class","p2Class");
+        p2.textContent = item.prodType;
+        var p3 = document.createElement("p");
+        p3.setAttribute("class","p3Class");
+        p3.textContent = `INR ${item.MRP}`;
+        var p4 = document.createElement("p");
+        p4.setAttribute("class","p4Class");
+        p4.textContent = item.Star;
+        var p5 = document.createElement("p");
+        p5.setAttribute("class","p5Class");
+        p5.textContent = item.Deliver;
+        imgDiv.append(img, p1, p2, p3, p4, p5);
+        rightBox.append(imgDiv);
+     })
+    }
+    // var rightBoxChild = document.createElement("")
+
+    // next
+
     
-    function signUp(e){
-        e.preventDefault();
-        var email = document.getElementById("email").value;
-        var UserCredentials = {
-            email:email,
+    function toggleDisplay(divID, id) {
+        var div = document.getElementById(divID);
+        var icon_id = document.getElementById(id);
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            icon_id.innerText = ' - ';
+        } else {
+            div.style.display = "none";
+            icon_id.innerText = ' + ';
+        }
+    }
 
-        };
-        // for(var i = 0;i<userArr.length;i++){
-        //     if (userArr[i].email == email )
-        //     {
-        //         console.log("efe");
-        //         window.location.href = "signin.html";
-        //     }else
-        userArr.push( UserCredentials);
-        localStorage.setItem("userData", JSON.stringify(userArr));
-        // console.log("here");
-         window.location.href = "signup1.html";
+    var tick = 0;
 
+    function Monclear() {
+        
+        console.log("here");
+        
+        womenData = womenData.filter(function (elem) {
+            // arr.push(elem.prodName == "Natori");
+            return elem.prodName == "Monclear";
+        })
+        productList(womenData);
+        
+        
     
-
-
-
-
-
+    }
+    function Burberry() {
+        // var arr = womenData;
+        console.log("here");
+        womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Burberry";
+        })
+        
+        // window.location.reload(true);
+    
+        productList(womenData);
 
         
-}
-function dropDown(a) {
+    }
+    function Givenchy() {
+        // var arr = womenData;
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Givenchy";
+        })
+        productList(womenData);
+    }
+    function MonclearGrenoble() {
+        
+        console.log("here");
+         womenData = womenData.filter(function (elem) {
+            return elem.prodName == "Monclear Grenoble";
+        })
+        productList(womenData);
+    }
+   
+
+    // ------
+    function createBrandFilters() {
+        var brands_div = document.getElementById('product-grid-brand-content');
+        brands_div.innerHTML = "";
+
+        var brands = {};
+
+        currentArray.forEach(function (product) {
+            if (brands[product.brand] === undefined) {
+                brands[product.brand] = 1;
+                var div = document.createElement('div');
+                div.setAttribute('class', 'product-grid-checkbox-div');
+
+                var checkbox = document.createElement('input');
+                checkbox.setAttribute('class', `product-grid-brand product-grid-checkmark`);
+                checkbox.setAttribute('type', 'checkbox');
+                checkbox.value = `${product.brand}`;
+                checkbox.onchange = addBrandFilter;
+
+                var label = document.createElement('p');
+                label.setAttribute('for', `${product.brand}`);
+                label.innerText = `${product.brand}`;
+
+                div.append(checkbox, label);
+                brands_div.appendChild(div);
+            }
+        })
+    }
+
+
+
+
+    function dropDown(a) {
         var show1 = document.querySelector("#main-content")
         var show = document.querySelector(`.${a}-content`)
         show1.style.display = "block";
@@ -2913,5 +3144,10 @@ function dropDown(a) {
         }
     }
     
+
+
+
+    
+   
 
 </script>
