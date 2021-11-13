@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Bag | Nordstorm</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
 
         #shopping-bag-container {
@@ -161,9 +162,10 @@
         <div id = "shopping-bag-titles">
             <p id = "shopping-bag-titles-name">Shopping Bag</p>
 
-            
-            <div id="AddedItems">Welcome here</div>
-            
+            <div id="AddedItems">Welcome Here ADD</div>
+
+
+
             <p id = "shopping-bag-titles-gift"><span class="material-icons">card_giftcard</span>Choose gift options when you check out.</p>
             <p id = "shopping-bag-titles-text">Items in your bag are not on hold.   </p>
         </div>
@@ -190,8 +192,9 @@
             </div>
 
             <div id = "shipping-bag-price-summary">
-                <div id = "shipping-bag-subtotal">
+                <div id = "shipping-bag-subtotal" >
                     <p>Subtotal</p>
+                    <p class="totalMRP">0</p>
                 </div>
 
                 <hr style = "width: 100%;"/>
@@ -294,5 +297,228 @@
 
 </html>
 
+<script>
+    var addItems = document.getElementById("AddedItems");
+
+    var cartArrItems = JSON.parse(localStorage.getItem("cartArrItems"));
+
+    displayItem(cartArrItems);
+
+    function  displayItem(product) {
+        product.map(function(item,index){
+            var cartDiv = document.createElement("div");
+            cartDiv.setAttribute("class","cartDiv");
+            var cart1Div = document.createElement
+            ("div");
+            var cart1Child1Div = document.createElement("div");
+            cart1Child1Div.setAttribute("class","cart1Child1Div")
+            var img = document.createElement("img");
+            img.setAttribute("src", item.prodImage)
+            img.setAttribute("class","cartImg");
+            cart1Child1Div.append(img);
+            var cart1Child2Div = document.createElement("div");
+            cart1Child2Div.setAttribute("class","cart1Child2Div");
+            cart1Div.append(cart1Child1Div,cart1Child2Div);
+            var h1 = document.createElement("h1");
+            h1.textContent = item.prodName;
+            
+            
+            cart1Div.setAttribute("class","cart1Div");
+
+            var cart2Div = document.createElement("div");
+            cart2Div.setAttribute("class","cart2Div");
+            
+            var cart2Child1Div = document.createElement("div");
+            cart2Child1Div.setAttribute("class","cart2Child1Div");
+
+            var cart2Child1Div1Child = document.createElement("div");
+            cart2Child1Div1Child.setAttribute("class","cart2Child1Div1Child");
+            var cart2Child1Div1Child1Div = document.createElement("div");
+            cart2Child1Div1Child1Div.setAttribute("class","cart2Child1Div1Child1Div")
+            var cart2Child1Div1Child1DivP1Tag = document.createElement("p");
+            cart2Child1Div1Child1DivP1Tag.setAttribute("class","cart2Child1Div1Child1DivP1Tag")
+            cart2Child1Div1Child1DivP1Tag.textContent = item.prodName;
+            var cart2Child1Div1Child1DivP2Tag = document.createElement("p");
+            cart2Child1Div1Child1DivP2Tag.setAttribute("class","cart2Child1Div1Child1DivP2Tag")
+            cart2Child1Div1Child1DivP2Tag.textContent = item.prodType;
+            cart2Child1Div1Child1Div.append(cart2Child1Div1Child1DivP1Tag,cart2Child1Div1Child1DivP2Tag);
+
+
+            var cart2Child1Div1Child2Div = document.createElement("div");
+            cart2Child1Div1Child2Div.setAttribute("class","cart2Child1Div1Child2Div");
+            var cart2Child1Div1Child2DivP1Tag = document.createElement("p");
+            cart2Child1Div1Child2DivP1Tag.setAttribute("class","cart2Child1Div1Child2DivP1Tag")
+            cart2Child1Div1Child2DivP1Tag.textContent = `Size: Small`;
+            var cart2Child1Div1Child2DivP2Tag = document.createElement("p");
+            cart2Child1Div1Child2DivP2Tag.setAttribute("class","cart2Child1Div1Child2DivP2Tag")
+            cart2Child1Div1Child2DivP2Tag.textContent = `Color: ${item.Color}`;
+            var cart2Child1Div1Child2DivP3Tag = document.createElement("p");
+            cart2Child1Div1Child2DivP3Tag.setAttribute("class","cart2Child1Div1Child2DivP3Tag")
+            cart2Child1Div1Child2DivP3Tag.textContent = `Item : 789068`;
+            cart2Child1Div1Child2Div.append(cart2Child1Div1Child2DivP1Tag,cart2Child1Div1Child2DivP2Tag,cart2Child1Div1Child2DivP3Tag);
+
+            cart2Child1Div1Child.append(cart2Child1Div1Child1Div,cart2Child1Div1Child2Div);
+
+            var cart2Child1Div2Child = document.createElement("div");
+            cart2Child1Div2Child.setAttribute("class","cart2Child1Div2Child");
+            var selectTag = document.createElement("select");
+            selectTag.setAttribute("class","selectTag");
+            selectTag.addEventListener("click",getValue)
+            // selectTag.addEventListener("click",selectQty)
+            var option1Tag = document.createElement("option");
+            option1Tag.setAttribute("value",1)
+            option1Tag.textContent = "Qty 1";
+            var option2Tag = document.createElement("option");
+            option2Tag.setAttribute("value",2)
+            option2Tag.textContent = "Qty 2";
+            var option3Tag = document.createElement("option");
+            option3Tag.setAttribute("value",3)
+            option3Tag.textContent = "Qty 3";
+            var option4Tag = document.createElement("option");
+            option4Tag.setAttribute("value",4)
+            option4Tag.textContent = "Qty 4";
+            var option5Tag = document.createElement("option");
+            option5Tag.setAttribute("value",5)
+            option5Tag.textContent = "Qty 5";
+            var option6Tag = document.createElement("option");
+            option6Tag.setAttribute("value",6)
+            option6Tag.textContent = "Qty 6";
+            var option7Tag = document.createElement("option");
+            option7Tag.setAttribute("value",7)
+            option7Tag.textContent = "Qty 7";
+            var option8Tag = document.createElement("option");
+            option8Tag.setAttribute("value",8)
+            option8Tag.textContent = "Qty 8";
+            var option9Tag = document.createElement("option");
+            option9Tag.setAttribute("value",9)
+            option9Tag.textContent = "Qty 9";
+            var option10Tag = document.createElement("option");
+            option10Tag.setAttribute("value",10)
+            option10Tag.textContent = "Qty 10";
+            selectTag.append(option1Tag,option2Tag,option3Tag,option4Tag,option5Tag,option6Tag,option7Tag,option8Tag,option9Tag,option10Tag);
+            cart2Child1Div2Child.append(selectTag);
+
+            var cart2Child1Div3Child = document.createElement("div");
+            cart2Child1Div3Child.setAttribute("class","cart2Child1Div3Child");
+            var cart2Child1Div3Child1Div = document.createElement("div");
+            cart2Child1Div3Child1Div.setAttribute("class","cart2Child1Div3Child1Div");
+            // cart2Child1Div3Child1Div.textContent = "hello";
+            var cart2Child1Div3Child1Div1Child = document.createElement("div");
+            cart2Child1Div3Child1Div1Child.setAttribute("class","cart2Child1Div3Child1Div1Child");
+            var cart2Child1Div3Child1Div2Child = document.createElement("div");
+            cart2Child1Div3Child1Div2Child.setAttribute("class","cart2Child1Div3Child1Div2Child");
+            cart2Child1Div3Child1Div2Child.textContent = `INR (${item.MRP}each)`;
+            cart2Child1Div3Child1Div.append(cart2Child1Div3Child1Div1Child,cart2Child1Div3Child1Div2Child);
+
+
+            var cart2Child1Div3Child2Div = document.createElement("div");
+            cart2Child1Div3Child2Div.setAttribute("class","cart2Child1Div3Child2Div");
+            cart2Child1Div3Child2Div.textContent = `Now: $29.90`;
+            cart2Child1Div3Child.append(cart2Child1Div3Child1Div,cart2Child1Div3Child2Div);
+
+            cart2Child1Div.append(cart2Child1Div1Child,cart2Child1Div2Child,cart2Child1Div3Child);
+
+            var cart2Child2Div = document.createElement("div");
+            cart2Child2Div.setAttribute("class","cart2Child2Div");
+            var cart2Child2Div1Child = document.createElement("div");
+            cart2Child2Div1Child.setAttribute("class","cart2Child2Div1Child");
+            var vanImg = document.createElement("img");
+            vanImg.setAttribute("src", "https://t4.ftcdn.net/jpg/04/32/41/09/240_F_432410901_j0rSgcWK57Qn3dVhIfPa5OnLxkMjlyZL.jpg");
+            vanImg.setAttribute("class","vanImg");
+            cart2Child2Div1Child.append(vanImg);
+            cart2Child2Div.append(cart2Child2Div1Child);
+
+            var cart2Child2Div2Child = document.createElement("div");
+            cart2Child2Div2Child.setAttribute("class","cart2Child2Div2Child");
+            cart2Child2Div2Child.innerHTML = `Delivery <br>
+International orders usually arrive within 5–13 business days. We'll give you delivery dates in checkout.`;
+
+
+            var vanImg = document.createElement("img");
+            vanImg.setAttribute("src", "https://t4.ftcdn.net/jpg/04/32/41/09/240_F_432410901_j0rSgcWK57Qn3dVhIfPa5OnLxkMjlyZL.jpg");
+            vanImg.setAttribute("class","vanImg");
+            // cart2Child2Div1Child.append(vanImg);
+            cart2Child2Div.append(cart2Child2Div1Child,cart2Child2Div2Child);
+
+            
+            // cart2Child2Div.textContent = "a"
+            var cart2Child3Div = document.createElement("div");
+            cart2Child3Div.setAttribute("class","cart2Child3Div");
+            // cart2Child3Div.textContent = "hello";
+            var remove = document.createElement("button")
+            remove.textContent = `Remove`;
+            remove.style.backgroundColor = "white";
+
+            remove.style.color = "red";
+            remove.style.border = "1px solid grey";
+            remove.addEventListener("click", removeItems);
+            var saveForLater = document.createElement("button")
+            saveForLater.textContent = `Save for later`;
+            saveForLater.style.color = "skyblue";
+            saveForLater.style.border = "1px solid grey";
+            saveForLater.style.backgroundColor = "white";
+            saveForLater.style.marginLeft = "5%";
+            cart2Child3Div.append(remove,saveForLater);
+
+
+
+            cart2Div.append(cart2Child1Div,cart2Child2Div,cart2Child3Div);
+
+            
+            document.getElementById("AddedItems").append(cartDiv);
+
+            cartDiv.append(cart1Div,cart2Div);
+            
+
+        })
+    }
+
+    // document.querySelector(".selectTag").addEventListener("click", getValue);
+    var sum = 1;
+    var value = document.querySelector(".selectTag").value;
+    console.log(value);
+   
+    function getValue(e) {
+        var value = document.querySelector(".selectTag").value;
+        var cart2Child1Div3Child1Div2Child = document.querySelector(".cart2Child1Div3Child1Div2Child");
+        cart2Child1Div3Child1Div2Child.textContent = `INR (${(e.MRP)*value} INR (${e.MRP}each)`;
+
+       sum = sum * e.value;
+    //    console.log(sum);
+       console.log(value);
+
+
+
+    }
+    function removeItems(index) {
+        cartArrItems.splice(index,1);
+        localStorage.setItem("cartArrItems",JSON.stringify(cartArrItems));
+        displayItem(cartArrItems);
+        console.log("here")
+        alert("Items Removed")
+        window.location.href = "cart.html";
+    }
+
+    var total = cartArrItems.reduce(function (acc, cv) {
+        return acc + Number(cv.MRP)
+    },0);
+console.log(total);
+var totalMRP = document.querySelector(".totalMRP");
+totalMRP.textContent = total;
+var totalamount = [];
+var finalPrice = {
+                "total" : total,
+            }
+            
+            
+
+
+            function goToCheckout() {
+                window.location.href = "checkout.html";
+            }
+            totalamount.push(finalPrice);
+            console.log(totalamount);
+            localStorage.setItem("total", JSON.stringify(totalamount));
+</script>
 
 
