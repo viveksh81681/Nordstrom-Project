@@ -1,4 +1,4 @@
-Complete Details About Nordstrom-Project ---  https://hashnode.com/post/nordstrom-website-clone-ckvxz38t9049mz2s1cc7zgota
+Complete Detail About Nordstrom-Project ---  https://hashnode.com/post/nordstrom-website-clone-ckvxz38t9049mz2s1cc7zgota
 #h1 Nordstrom website clone
 Good day, everyone! I hope you're all doing well. I'm making this blog to tell you about my entire team's experience of cloning (this website) during our first construct week. We got a total of 15 days to complete this job.
 
